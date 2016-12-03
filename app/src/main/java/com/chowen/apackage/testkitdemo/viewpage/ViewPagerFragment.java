@@ -1,4 +1,4 @@
-package com.chowen.apackage.testkitdemo.viewpage.base;
+package com.chowen.apackage.testkitdemo.viewpage;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,8 +14,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.chowen.apackage.testkitdemo.R;
-import com.chowen.apackage.testkitdemo.viewpage.Page1;
-import com.chowen.apackage.testkitdemo.viewpage.Page2;
 import com.chowen.apackage.testkitdemo.viewpage.base.adapter.BasePagerAdapter;
 
 import me.yokeyword.fragmentation.SupportFragment;

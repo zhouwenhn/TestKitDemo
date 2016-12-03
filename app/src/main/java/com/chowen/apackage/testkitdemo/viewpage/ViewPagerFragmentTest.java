@@ -3,27 +3,20 @@ package com.chowen.apackage.testkitdemo.viewpage;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.util.DisplayMetrics;
 import android.util.SparseArray;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.chowen.apackage.testkitdemo.R;
-import com.chowen.apackage.testkitdemo.viewpage.base.adapter.BasePagerAdapter;
-
-import me.yokeyword.fragmentation.SupportFragment;
+import com.chowen.apackage.testkitdemo.viewpage.base.BaseViewPagerFragment;
 
 /**
  * Created by zhouwen on 2016/12/3.
  * Description:
  */
 
-public class ViewPagerFragmentTest extends BaseViewPagerFragment{
+public class ViewPagerFragmentTest extends BaseViewPagerFragment {
 
     private SparseArray<Fragment> mViews = new SparseArray<Fragment>();
 
