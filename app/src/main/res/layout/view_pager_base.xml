@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:text="ViewPager"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_radio_view"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/tv"
+        android:background="@android:color/white"
+        android:clickable="true">
+
+        <RadioGroup
+            android:id="@+id/rg_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/btn_1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="1"-->
+                <!--android:button="@null"-->
+                <!--android:checked="true"-->
+                <!--android:gravity="center"-->
+                <!--android:text="RadioButton1"-->
+                <!--android:textColor="@android:color/holo_blue_dark"-->
+                <!--android:textSize="18sp" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/btn_2"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="1"-->
+                <!--android:button="@null"-->
+                <!--android:gravity="center"-->
+                <!--android:text="RadioButton1"-->
+                <!--android:textColor="@android:color/holo_blue_dark"-->
+                <!--android:textSize="18sp" />-->
+        </RadioGroup>
+
+        <View
+            android:id="@+id/scroll_bar_view"
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_red_dark" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/lvp_contribute_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_radio_view"
+        android:background="@android:color/white" />
+
+</RelativeLayout>

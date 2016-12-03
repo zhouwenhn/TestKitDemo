@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_585948a67cc373b6496792d80fc46bc99634f53d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_c800a72ecff413e6dda4b6b865c335c151938b3a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_ea6e53c5de9432435400f06032d1b6ffda8c35df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_80a5d87f442eab52682107b23b00e27ce6e94442/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/me.yokeyword/fragmentation/0.8.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a9d7bd5926b39bfc074a5fbbc2115e448deb26c2">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/me.yokeyword-fragmentation-0.8.2_49a2cc11a96705dd20fad6eb46bdbef0c385b630/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_ddc760bda8571f7a281474741143f73c71369d0d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_063d1f38dbb70c485e9f7af4e343dfef1a5e33b8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_e84a40e977ac131cd41abf938126730a089fcdb9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_3b47a6e91d8278f0ccb1db44b96267aceae83002/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_575dc3a9a8e01e37ef41a25ca42c14dbdd4957b8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_bf855211efa415aa83342b785c40bfa7a8f98101/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_f11448b3fa3a027ea2c8f21436567e8132dd99c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_034effc2cee3a823974c6e3d8304d08353afc09d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_a98b2afaefd40d894c177723780117256b60ea6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_c73b61bc4fe86ce91e0905eca3602421eca0a283/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c348bd2b1e789171bd0a9fd235821c3bc1f97722">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_686fbdda1c9e8379d12ff73b6c7faa401b34c02a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_85957ae35de3cdadc33f2ebce1ea459048933f02/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6dcd23cb58e0570b4b0cbe72b17e295894a624fc">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_eb2ee15ab1914d3ac3da90faa26abe69418d955e/classes.dex" />
+    </item>
+
+</items>
