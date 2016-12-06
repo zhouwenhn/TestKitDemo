@@ -31,8 +31,6 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
 
     protected SparseArray<Fragment> mViewArray = new SparseArray<Fragment>();
 
-    protected String[] mTabs;
-
     protected View mTabScrollBar;
 
     protected ViewPager mViewPager;
@@ -40,6 +38,8 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
     protected RadioGroup mRadioGroup;
 
     protected int mTabScrollBarWidth;
+
+    private String[] mTabs;
 
     private View mView = null;
 
@@ -73,6 +73,7 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
     }
 
     public void setTabsItem() {
+        mTabs = getTabs();
         DisplayMetrics dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
         int indicatorWidth = dm.widthPixels / mTabs.length;
@@ -105,6 +106,8 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
     }
 
     protected abstract @NonNull SparseArray<Fragment> initViewPagers();
+
+    protected abstract @NonNull String[] getTabs();
 
     protected abstract void onRadioGroupCheckedChanged(RadioGroup radioGroup, int position);
 

@@ -1,6 +1,7 @@
 package com.chowen.apackage.testkitdemo.viewpage;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.SparseArray;
@@ -31,11 +32,11 @@ public class ViewPagerFragment extends BaseViewPagerFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mTabs = new String[]{"消息","发现","关注","我的"};
         mTabScrollBarWidth = 24;
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+    @NonNull
     @Override
     protected SparseArray<Fragment> initViewPagers() {
         mViews.append(0, new Page1());
@@ -43,6 +44,12 @@ public class ViewPagerFragment extends BaseViewPagerFragment {
         mViews.append(2, new Page2());
         mViews.append(3, new Page2());
         return mViews;
+    }
+
+    @NonNull
+    @Override
+    protected String[] getTabs() {
+        return new String[]{"消息","发现","关注","我的"};
     }
 
     @Override
