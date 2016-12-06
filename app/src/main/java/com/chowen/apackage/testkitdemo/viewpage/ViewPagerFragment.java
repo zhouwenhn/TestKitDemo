@@ -3,42 +3,22 @@ package com.chowen.apackage.testkitdemo.viewpage;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.util.DisplayMetrics;
 import android.util.SparseArray;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.chowen.apackage.testkitdemo.R;
-import com.chowen.apackage.testkitdemo.viewpage.base.adapter.BasePagerAdapter;
-
-import me.yokeyword.fragmentation.SupportFragment;
+import com.chowen.apackage.testkitdemo.viewpage.base.BaseViewPagerFragment;
 
 /**
  * Created by zhouwen on 2016/12/3.
  * Description:
  */
 
-public class ViewPagerFragment extends SupportFragment implements RadioGroup.OnCheckedChangeListener,
-        ViewPager.OnPageChangeListener {
+public class ViewPagerFragment extends BaseViewPagerFragment {
 
-    private SparseArray<Fragment> mViewArray = new SparseArray<Fragment>();
-
-    private View mView = null;
-
-    private View mTopLineView;
-
-    private ViewPager mViewPager;
-
-    private RadioGroup mRadioGroup;
-
-    private int mNavItemWidth;
-
-    private int mTopNavIndicatorMargin;
+    private SparseArray<Fragment> mViews = new SparseArray<Fragment>();
 
     public static ViewPagerFragment newInstance() {
         ViewPagerFragment fragment = new ViewPagerFragment();
@@ -51,66 +31,27 @@ public class ViewPagerFragment extends SupportFragment implements RadioGroup.OnC
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        if (mView == null) {
-            mView = inflater.inflate(R.layout.view_pager, container, false);
-        }
-        initViews();
-        initScrollBar();
-        initViewPagers();
-        return mView;
-    }
-
-    private void initViewPagers() {
-        mViewArray.append(0, new Page1());
-        mViewArray.append(1, new Page2());
-        BasePagerAdapter pagerAdapter = new BasePagerAdapter(getChildFragmentManager());
-        pagerAdapter.setPages(mViewArray);
-        mViewPager.setAdapter(pagerAdapter);
-    }
-
-    private void initViews() {
-        mRadioGroup = (RadioGroup) mView.findViewById(R.id.rg_radio_group);
-        mRadioGroup.setOnCheckedChangeListener(this);
-        mViewPager = (ViewPager) mView.findViewById(R.id.lvp_contribute_pager);
-        mViewPager.setOnPageChangeListener(this);
-    }
-
-    private void initScrollBar() {
-        mTopLineView = mView.findViewById(R.id.top_line_view);
-        DisplayMetrics dm = getContext().getResources().getDisplayMetrics();
-        mNavItemWidth = dm.widthPixels / 2;
-        int navIndicatorWidth = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 64, getContext().getResources()
-                        .getDisplayMetrics());
-        ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) mTopLineView
-                .getLayoutParams();
-        mTopNavIndicatorMargin = (mNavItemWidth - navIndicatorWidth) / 2;
-        lp.leftMargin = mTopNavIndicatorMargin;
+        mTabs = new String[]{"消息","发现","关注","我的"};
+        mTabScrollBarWidth = 24;
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup radioGroup, int position) {
-        RadioButton btn = (RadioButton) mRadioGroup.getChildAt(position);
-        btn.setChecked(true);
+    protected SparseArray<Fragment> initViewPagers() {
+        mViews.append(0, new Page1());
+        mViews.append(1, new Page2());
+        mViews.append(2, new Page2());
+        mViews.append(3, new Page2());
+        return mViews;
     }
 
     @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) mTopLineView
-                .getLayoutParams();
-        lp.leftMargin = (mNavItemWidth * position)
-                + mTopNavIndicatorMargin
-                + (int) (positionOffset * (mTopLineView.getWidth() + mTopNavIndicatorMargin * 2));
-        mTopLineView.requestLayout();
+    protected void onRadioGroupCheckedChanged(RadioGroup radioGroup, int position) {
     }
 
     @Override
-    public void onPageSelected(int position) {
+    protected void onViewPagerScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
     }
 
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
 }

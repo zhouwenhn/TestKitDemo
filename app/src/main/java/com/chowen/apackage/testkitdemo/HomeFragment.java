@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragmentTest;
+import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
@@ -43,8 +43,7 @@ public class HomeFragment extends SupportFragment {
         mView.findViewById(R.id.btn_view_pager).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                start(ViewPagerFragment.newInstance());
-                start(ViewPagerFragmentTest.newInstance());
+                start(ViewPagerFragment.newInstance());
             }
         });
     }

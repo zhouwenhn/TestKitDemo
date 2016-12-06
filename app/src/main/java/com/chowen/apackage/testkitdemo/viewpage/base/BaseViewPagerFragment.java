@@ -55,7 +55,7 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
             mView = inflater.inflate(R.layout.view_pager_base, container, false);
         }
         initViewPager();
-        addRadioItem();
+        setTabsItem();
         initScrollBar();
 
         return mView;
@@ -72,7 +72,7 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
         mViewPager.setAdapter(pagerAdapter);
     }
 
-    public void addRadioItem() {
+    public void setTabsItem() {
         DisplayMetrics dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
         int indicatorWidth = dm.widthPixels / mTabs.length;
