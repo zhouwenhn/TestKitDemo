@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.SparseArray;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,12 +80,10 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
 
         for (int i = 0; i < mTabs.length; i++) {
             RadioButton rb = new RadioButton(getContext());
-//                    (RadioButton) LayoutInflater.
-//                    from(getContext()).inflate(R.layout.radio_button, mRadioGroup);
-//                    new RadioButton(getContext());
             rb.setId(i);
             rb.setText(mTabs[i]);
-//            rb.setPadding(0, 20, 0, 0);
+            rb.setGravity(Gravity.CENTER);
+            rb.setButtonDrawable(null);
             rb.setLayoutParams(new LinearLayout.LayoutParams(indicatorWidth,
                     ViewGroup.LayoutParams.MATCH_PARENT, 1.0f));
 

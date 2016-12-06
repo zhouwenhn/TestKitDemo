@@ -31,7 +31,7 @@ public class ViewPagerFragmentTest extends BaseViewPagerFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mTabs = new String[]{"tab1","tab2","tab3"};
+        mTabs = new String[]{"消息","发现","关注","我的"};
         mTabScrollBarWidth = 24;
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -41,6 +41,7 @@ public class ViewPagerFragmentTest extends BaseViewPagerFragment {
         mViews.append(0, new Page1());
         mViews.append(1, new Page2());
         mViews.append(2, new Page2());
+        mViews.append(3, new Page2());
         return mViews;
     }
 
