@@ -1,6 +1,7 @@
 package com.chowen.apackage.testkitdemo.viewpage.base;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -104,7 +105,7 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
         lp.leftMargin = mTopNavIndicatorMargin;
     }
 
-    protected abstract SparseArray<Fragment> initViewPagers();
+    protected abstract @NonNull SparseArray<Fragment> initViewPagers();
 
     protected abstract void onRadioGroupCheckedChanged(RadioGroup radioGroup, int position);
 
