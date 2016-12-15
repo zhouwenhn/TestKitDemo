@@ -19,8 +19,6 @@ import com.chowen.apackage.testkitdemo.viewpage.base.BaseViewPagerFragment;
 
 public class ViewPagerFragment extends BaseViewPagerFragment {
 
-    private SparseArray<Fragment> mViews = new SparseArray<Fragment>();
-
     public static ViewPagerFragment newInstance() {
         ViewPagerFragment fragment = new ViewPagerFragment();
         Bundle bundle = new Bundle();
@@ -36,14 +34,12 @@ public class ViewPagerFragment extends BaseViewPagerFragment {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    @NonNull
     @Override
-    protected SparseArray<Fragment> initViewPagers() {
-        mViews.append(0, new Page1());
-        mViews.append(1, new Page2());
-        mViews.append(2, new Page2());
-        mViews.append(3, new Page2());
-        return mViews;
+    protected void initViewPagers() {
+        mViewArray.append(0, new Page1());
+        mViewArray.append(1, new Page2());
+        mViewArray.append(2, new Page2());
+        mViewArray.append(3, new Page2());
     }
 
     @NonNull

@@ -53,11 +53,10 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
                              @Nullable Bundle savedInstanceState) {
         if (mView == null) {
             mView = inflater.inflate(R.layout.view_pager_base, container, false);
+            initViewPager();
+            setTabsItem();
+            initScrollBar();
         }
-        initViewPager();
-        setTabsItem();
-        initScrollBar();
-
         return mView;
     }
 
@@ -66,7 +65,7 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
         mRadioGroup.setOnCheckedChangeListener(this);
         mViewPager = (ViewPager) mView.findViewById(R.id.lvp_contribute_pager);
         mViewPager.setOnPageChangeListener(this);
-        mViewArray = initViewPagers();
+        initViewPagers();
         BasePagerAdapter pagerAdapter = new BasePagerAdapter(getFragmentManager());
         pagerAdapter.setPages(mViewArray);
         mViewPager.setAdapter(pagerAdapter);
@@ -83,6 +82,8 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
             RadioButton rb = new RadioButton(getContext());
             rb.setId(i);
             rb.setText(mTabs[i]);
+            rb.setTextSize(18);
+            rb.setTextColor(getContext().getResources().getColor(R.color.nav_text_color));
             rb.setGravity(Gravity.CENTER);
             rb.setButtonDrawable(null);
             rb.setLayoutParams(new LinearLayout.LayoutParams(indicatorWidth,
@@ -105,20 +106,67 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
         lp.leftMargin = mTopNavIndicatorMargin;
     }
 
-    protected abstract @NonNull SparseArray<Fragment> initViewPagers();
+    /**
+     * 初始化views
+     */
+    protected abstract void initViewPagers();
 
+    /**
+     * tab items
+     * @return tabs
+     */
     protected abstract @NonNull String[] getTabs();
 
+    /**
+     * CheckedChanged 选择
+     * @param radioGroup rediogroup
+     * @param position 位置index
+     */
     protected abstract void onRadioGroupCheckedChanged(RadioGroup radioGroup, int position);
 
+    /**
+     * onPageScrolled 滑动
+     * @param position 位置index
+     * @param positionOffset 当前页面滑动比例
+     * @param positionOffsetPixels 当前页面滑动像素
+     */
     protected abstract void onViewPagerScrolled(int position, float positionOffset, int positionOffsetPixels);
 
+    /**
+     * onPageSelected
+     * @param position 位置index
+     */
     protected void onViewPagerSelected(int position) {
 
     }
 
+    /**
+     * onPageScrollStateChanged
+     * @param state 0（END）,1(PRESS) , 2(UP)
+     */
     protected void onViewPagerScrollStateChanged(int state) {
 
+    }
+
+    /**
+     * 设置界面预加载个数
+     * @param isAllPageLimit true 全部加载，false加载一个
+     */
+    protected void setAlwaysKeepPager(boolean isAllPageLimit) {
+        if(isAllPageLimit) {
+            mViewPager.setOffscreenPageLimit(mViewArray.size());
+        } else {
+            mViewPager.setOffscreenPageLimit(1);
+        }
+
+    }
+
+    /**
+     * 设置界面预加载个数
+     * @param pageLimit 预加载界面个数
+     */
+    protected void setAlwaysKeepPager(int pageLimit) {
+        mViewPager.setOffscreenPageLimit(pageLimit);
     }
 
     @Override
