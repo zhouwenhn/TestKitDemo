@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d2aadf250d398576c446237b237c005d66c5936e">
+        sha1="4ab58696c9a157f461bed474e7004fa401932763">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_3fafbfde23d7400e36ebace88654d0f2e011d5f1/classes.dex" />
     </item>
     <item
@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d27002b6dddca4fa3d9a6dadd6353ff9c106235a">
+        sha1="5e7c1d18dc56dd78b6ae6ac5a8502b3d9b304ee3">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4bf1348e7176223cda2e64cd4a855101bdb5cb1f/classes.dex" />
     </item>
     <item

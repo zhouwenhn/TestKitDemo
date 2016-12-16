@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.chowen.apackage.testkitdemo.R;
+import com.chowen.apackage.testkitdemo.bar.Bar;
 import com.chowen.apackage.testkitdemo.viewpage.base.adapter.BasePagerAdapter;
 
 import me.yokeyword.fragmentation.SupportFragment;
@@ -30,6 +32,8 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
         ViewPager.OnPageChangeListener {
 
     protected SparseArray<Fragment> mViewArray = new SparseArray<Fragment>();
+
+    protected Bar mBar;
 
     protected View mTabScrollBar;
 
@@ -53,14 +57,15 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
                              @Nullable Bundle savedInstanceState) {
         if (mView == null) {
             mView = inflater.inflate(R.layout.view_pager_base, container, false);
-            initViewPager();
-            setTabsItem();
+            initViews();
+            initTabsItem();
             initScrollBar();
         }
         return mView;
     }
 
-    private void initViewPager() {
+    private void initViews() {
+        mBar = (Bar) mView.findViewById(R.id.ll_top_bar);
         mRadioGroup = (RadioGroup) mView.findViewById(R.id.rg_radio_group);
         mRadioGroup.setOnCheckedChangeListener(this);
         mViewPager = (ViewPager) mView.findViewById(R.id.lvp_contribute_pager);
@@ -69,9 +74,20 @@ public abstract class BaseViewPagerFragment extends SupportFragment implements R
         BasePagerAdapter pagerAdapter = new BasePagerAdapter(getFragmentManager());
         pagerAdapter.setPages(mViewArray);
         mViewPager.setAdapter(pagerAdapter);
+        mBar.setBarListener(new Bar.BarListener() {
+            @Override
+            public void backOnClickListener() {
+                Toast.makeText(getContext(),"back", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void moreOnClickListener() {
+                Toast.makeText(getContext(),"more", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
-    public void setTabsItem() {
+    public void initTabsItem() {
         mTabs = getTabs();
         DisplayMetrics dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);

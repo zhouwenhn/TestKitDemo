@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.chowen.apackage.testkitdemo.bar.Bar;
 import com.chowen.apackage.testkitdemo.viewpage.base.BaseViewPagerFragment;
 
 /**
@@ -31,7 +33,22 @@ public class ViewPagerFragment extends BaseViewPagerFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mTabScrollBarWidth = 24;
+        initBars();
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    private void initBars() {
+//        mBar.setBarListener(new Bar.BarListener() {
+//            @Override
+//            public void backOnClickListener() {
+//                Toast.makeText(getContext(),"back", Toast.LENGTH_LONG).show();
+//            }
+//
+//            @Override
+//            public void moreOnClickListener() {
+//                Toast.makeText(getContext(),"more", Toast.LENGTH_LONG).show();
+//            }
+//        });
     }
 
     @Override
