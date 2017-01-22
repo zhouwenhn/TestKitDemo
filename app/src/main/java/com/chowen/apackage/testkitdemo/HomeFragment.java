@@ -1,15 +1,23 @@
 package com.chowen.apackage.testkitdemo;
 
+import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
 
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
@@ -60,7 +68,26 @@ public class HomeFragment extends SupportFragment {
                 "com.chowen.apackage.testkitdemo.Test12");
         mPm = getActivity().getPackageManager();
         initViews();
+
+        //判断SDK版本是否大于等于19，大于就让他显示，小于就要隐藏，不然低版本会多出来一个
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            //setTranslucentStatus(true);
+        }
         return mView;
+    }
+
+    //test 沉寂式状态栏
+    @TargetApi(19)
+    private void setTranslucentStatus(boolean on) {
+        Window win = getActivity().getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
     }
 
     private void initViews() {
@@ -83,6 +110,34 @@ public class HomeFragment extends SupportFragment {
                 changeIcon12(view);
             }
         });
+
+
+        //TextInputLayout
+        final TextInputLayout textInputLayout = (TextInputLayout) mView.findViewById(R.id.til_pwd);
+
+        EditText editText = textInputLayout.getEditText();
+        textInputLayout.setHint("Password");
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                if (s.length() > 4) {
+                    textInputLayout.setError("Password error");
+                    textInputLayout.setErrorEnabled(true);
+                } else {
+                    textInputLayout.setErrorEnabled(false);
+                }
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
     }
 
     public void changeIcon11(View view) {

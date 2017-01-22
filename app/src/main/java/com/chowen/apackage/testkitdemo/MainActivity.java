@@ -1,12 +1,16 @@
 package com.chowen.apackage.testkitdemo;
 
+import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.chowen.apackage.testkitdemo.treadtest.MThread;
 import com.chowen.apackage.testkitdemo.treadtest.MyThread2;
@@ -28,6 +32,7 @@ public class MainActivity extends SupportActivity {
         testCaseThread();
     }
 
+//test thread
     private void testCaseThread() {
         MThread myThead = new MThread();
         Thread thread = new Thread(myThead);

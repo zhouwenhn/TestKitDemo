@@ -6,3 +6,7 @@
 /gradlew
 /gradlew.bat
 /local.properties
+/build.gradle
+/.gitignore
+/app/build.gradle
+/app/*.iml
