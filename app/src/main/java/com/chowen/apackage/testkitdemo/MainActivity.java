@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -30,6 +31,9 @@ public class MainActivity extends SupportActivity {
         }
 //        MainActivity.this.reportFullyDrawn();
         testCaseThread();
+        //test service
+        Intent intent = new Intent(MainActivity.this, TestService.class);
+        startService(intent);
     }
 
 //test thread
@@ -41,5 +45,13 @@ public class MainActivity extends SupportActivity {
         thread.setPriority(Thread.MIN_PRIORITY);
         thread2.start();
         thread2.setPriority(Thread.MAX_PRIORITY);
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.e("MainActivity.this","MainActivity>>>onDestroy");
+//        Intent intent = new Intent(MainActivity.this, TestService.class);
+//        stop
+        super.onDestroy();
     }
 }
