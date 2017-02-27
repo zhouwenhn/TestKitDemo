@@ -9,7 +9,12 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-
+<!--//秒开，替换系统主题-->
+    <style name="SplashTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@mipmap/tm_splash_bg</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
 
     <style name="AppThemeTwo" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@android:color/holo_red_light</item>

@@ -20,6 +20,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 
+import com.chowen.apackage.testkitdemo.dianshang_home_page.HomeListPage;
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
 import java.util.List;
@@ -150,6 +151,13 @@ public class HomeFragment extends SupportFragment {
 
             @Override
             public void afterTextChanged(Editable s) {
+            }
+        });
+
+        mView.findViewById(R.id.btn_home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                start(HomeListPage.newInstance());
             }
         });
 

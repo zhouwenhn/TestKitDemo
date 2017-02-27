@@ -18,11 +18,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors{
-        baidu{ applicationId = "chow.test" }
-        wandoujai {  }
-        yingyongbao{  }
-    }
+//    productFlavors{
+//        baidu{ applicationId = "chow.test" }
+//        wandoujai {  }
+//        yingyongbao{  }
+//    }
 }
 
 dependencies {
