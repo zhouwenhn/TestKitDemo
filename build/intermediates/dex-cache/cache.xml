@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-watcher/1.3/632482a61ad24b7ec864072945d221369f9a606/leakcanary-watcher-1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0632482a61ad24b7ec864072945d221369f9a606">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/leakcanary-watcher-1.3_5ae57f27f744da5bb1eb6ff20fcda771581f2e77.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/me.yokeyword/fragmentation/0.8.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -43,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5add662b3b90810860f2da2ba912013812f3cd79">
+        sha1="175096266fcb1743508a9fb81fa13900bdfc97de">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_3fafbfde23d7400e36ebace88654d0f2e011d5f1.jar" />
     </item>
     <item
@@ -102,6 +111,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.haha/haha/1.1/b7b2e61ee1ad2d1ac6ae3122de9c940fb0d0e635/haha-1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b7b2e61ee1ad2d1ac6ae3122de9c940fb0d0e635">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/haha-1.1_be307f25be89a1e6578de34dacf3f9bbfb93a1a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f4e7adebf49e683db82fb6efac2caaf3d768b8d4">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.squareup.leakcanary-leakcanary-android-1.3_5b02b2837c7bd54a45185671970da1411099ecf7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -153,6 +180,15 @@
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.0_8b92ecb68bff8e609b61040ebc7d0961a7740adf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-analyzer/1.3/c5399b18a672f7973c8a9b9d6b731a3a36e590cc/leakcanary-analyzer-1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c5399b18a672f7973c8a9b9d6b731a3a36e590cc">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/leakcanary-analyzer-1.3_c788bbf0e10960f3f8817e8af01d52960f4f8fcf.jar" />
     </item>
     <item
         is-multidex="false"
