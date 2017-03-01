@@ -75,10 +75,12 @@ public class Bar extends RelativeLayout implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_back:
-                mBarListener.backOnClickListener();
+                if (mBarListener != null)
+                    mBarListener.backOnClickListener();
                 break;
             case R.id.iv_more:
-                mBarListener.moreOnClickListener();
+                if (mBarListener != null)
+                    mBarListener.moreOnClickListener();
                 break;
         }
     }
