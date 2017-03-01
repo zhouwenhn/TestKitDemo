@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/fl_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -47,7 +46,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="防天猫电商界面"
+            android:text="防天猫电商界面_ListView"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_recycler_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="防天猫电商界面_RecyclerView"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_animator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="属性动画"
             android:textSize="20sp" />
 
         <LinearLayout

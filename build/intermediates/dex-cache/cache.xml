@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="175096266fcb1743508a9fb81fa13900bdfc97de">
+        sha1="18fb455400e41b531dbf1b0ac2fa6a0c786b4f6e">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_3fafbfde23d7400e36ebace88654d0f2e011d5f1.jar" />
     </item>
     <item
@@ -63,6 +63,15 @@
         revision="25.0.0"
         sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.0_25ba4c0d3bd1afb1205e0c0aaafadd276e1fddbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.0_24212557c1bf884733303ec4fd53cb6bb12cc571.jar" />
     </item>
     <item
         is-multidex="false"
@@ -99,6 +108,15 @@
         revision="25.0.0"
         sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.0_6ddfc8069ab22ce125c07d11b362a5dab24ca7f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0/constraint-layout-solver-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0_097c6416ada7074c3cb63c560b3aabdd0b5c10aa.jar" />
     </item>
     <item
         is-multidex="false"
@@ -219,6 +237,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/me.henrytao/smooth-app-bar-layout/0.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1566dabeb3a39c082eccbc7490e36b50e0a94311">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/me.henrytao-smooth-app-bar-layout-0.2.1_1d705bee9852369488fe44244c4b53bb2179271f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -232,7 +259,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="cb44c4171f30e329542b9da53eee7c594994a172">
+        sha1="fbc7e0b2d3504b7ffb332a334ab33cb609e50697">
         <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/instant-run_4bf1348e7176223cda2e64cd4a855101bdb5cb1f.jar" />
     </item>
 

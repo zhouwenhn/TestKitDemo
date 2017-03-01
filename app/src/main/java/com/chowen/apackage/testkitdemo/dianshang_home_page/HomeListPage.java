@@ -2,16 +2,19 @@ package com.chowen.apackage.testkitdemo.dianshang_home_page;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.chowen.apackage.testkitdemo.R;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.adapter.HomeListAdapter;
+import com.chowen.apackage.testkitdemo.utils.L;
 import com.chowen.apackage.testkitdemo.viewpage.base.adapter.ViewPageAdapter;
 
 import java.util.ArrayList;
@@ -20,7 +23,7 @@ import java.util.List;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
- * @author zhouwen  gzzhouwen1@corp.netease.com
+ * @author zhouwen
  * @since 2017/2/26
  */
 
@@ -39,6 +42,12 @@ public class HomeListPage extends SupportFragment {
     private View mListContainer;
 
     private View mHeaderView;
+
+    private int mPosition = 0;
+
+    private Handler mHandler = new Handler();
+
+    private Runnable runnable;
 
     public static HomeListPage newInstance() {
         HomeListPage fragment = new HomeListPage();
@@ -76,22 +85,52 @@ public class HomeListPage extends SupportFragment {
 
         mListView.addHeaderView(mHeaderView, null, false);
         mListView.setAdapter(homeListAdapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                L.e("onItemClick>>>" + position);
+            }
+        });
     }
 
     private void initViewPager() {
         mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
+        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
+        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
+        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page4, null));
 
         mViewPager = (ViewPager) mHeaderView.findViewById(R.id.view_pager);
 
         mViewPageAdapter = new ViewPageAdapter(mList);
         mViewPager.setAdapter(mViewPageAdapter);
+
+//        runnable = new Runnable() {
+//            @Override
+//            public void run() {
+//                if (mPosition == mList.size()-1) {
+//                    mPosition = 0;
+//                }
+//                mViewPager.setCurrentItem(mPosition, false);
+//                mHandler.postDelayed(this, 2000);
+//                mPosition++;
+//            }
+//        };
+//        mHandler.postDelayed(runnable, 2000);
+
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+//                switch (position) {
+//                    case ViewPager.SCROLL_STATE_DRAGGING:
+//                        mHandler.removeCallbacks(runnable);
+//                        break;
+//                    case ViewPager.SCROLL_STATE_IDLE:
+//                        mHandler.postDelayed(runnable, 2000);
+//                        break;
+//                    default:
+//                        break;
+//                }
             }
 
             @Override
@@ -103,6 +142,8 @@ public class HomeListPage extends SupportFragment {
 
             }
         });
+
+
     }
 
     @Override

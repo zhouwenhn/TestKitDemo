@@ -5,10 +5,12 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chowen.apackage.testkitdemo.utils.L;
+
 import java.util.List;
 
 /**
- * @author zhouwen  gzzhouwen1@corp.netease.com
+ * @author zhouwen
  * @since 2017/2/26
  */
 
@@ -32,12 +34,22 @@ public class ViewPageAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        ((ViewPager) container).removeView(mList.get(position % mList.size()));
+        // ((ViewPager) container).removeView(mList.get(position % mList.size()));
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        ((ViewPager) container).addView(mList.get(position % mList.size()), 0);
-        return mList.get(position % mList.size());
+        L.e("instantiateItem>>>>"+position);
+        position %= mList.size();
+        if (position < 0) {
+            position = mList.size() + position;
+        }
+        View imageView = mList.get(position);
+        if (null != imageView.getParent()) {
+            ViewGroup viewGroup = (ViewGroup) imageView.getParent();
+            viewGroup.removeView(imageView);
+        }
+        ((ViewPager) container).addView(imageView);
+        return imageView;
     }
 }
