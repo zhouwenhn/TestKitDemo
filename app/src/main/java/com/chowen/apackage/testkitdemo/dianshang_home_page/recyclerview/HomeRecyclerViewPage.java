@@ -43,11 +43,15 @@ public class HomeRecyclerViewPage extends SupportFragment {
 
     private RecyclerView mRecyclerList;
 
-    private ImageAdapter mAdapter;
+    private RecyclerAdapter mAdapter;
 
 //    private ListView mListView;
 
     private View mHeaderView;
+
+    private GridLayoutManager layoutManager;
+
+//    private LinearLayoutManager layoutManager;
 
     public static HomeRecyclerViewPage newInstance() {
         HomeRecyclerViewPage fragment = new HomeRecyclerViewPage();
@@ -61,9 +65,8 @@ public class HomeRecyclerViewPage extends SupportFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mView == null) {
             mView = inflater.inflate(R.layout.dianshang_recycler_home_page, container, false);
+            mRecyclerList = (RecyclerView) mView.findViewById(R.id.recycler_list);
 
-            initViews();
-            initViewPager();
             initRecyclerListView();
 
         }
@@ -76,39 +79,38 @@ public class HomeRecyclerViewPage extends SupportFragment {
             list.add(getActivity().getLayoutInflater().inflate(R.layout.recycler_item_view, null));
         }
 
-        mAdapter = new ImageAdapter(list);
-        mAdapter.setHeaderView(mHeaderView);
-
-
-        mRecyclerList = (RecyclerView) mView.findViewById(R.id.recycler_list);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(),2,LinearLayoutManager.VERTICAL, false);
+//        layoutManager = new LinearLayoutManager(getContext());
+        layoutManager = new GridLayoutManager(getContext(), 2);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerList.setLayoutManager(layoutManager);
         mRecyclerList.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerList.setHasFixedSize(true);
+
+        mHeaderView = LayoutInflater.from(getContext()).inflate(R.layout.header_layout, mRecyclerList, false);
+
+        mAdapter = new RecyclerAdapter(list);
+        mAdapter.setHeaderView(mHeaderView);
         mRecyclerList.setAdapter(mAdapter);
 
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                if (position == 0) {
-                    return 2;
-                }
-                return 1;
+                return isHeaderPosition(position) ? layoutManager.getSpanCount() : 1;
             }
         });
 
+        initViewPager();
     }
 
-    private void initViews() {
-        mHeaderView = LayoutInflater.from(getContext()).inflate(R.layout.header_layout, null, false);
+    private boolean isHeaderPosition(int position) {
+        return position == 0;
     }
 
     private void initViewPager() {
         mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
+        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
+        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
+        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page4, null));
 
         mViewPager = (ViewPager) mHeaderView.findViewById(R.id.view_pager);
 
@@ -130,68 +132,4 @@ public class HomeRecyclerViewPage extends SupportFragment {
             }
         });
     }
-
-    protected class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
-        private final static int VIEW_HEADER = 1, VIEW_ITEM = 0;
-        private List<View> list = new ArrayList<>();
-        private View headerView;
-
-        public ImageAdapter(List<View> list) {
-            this.list = list;
-        }
-
-        public void setHeaderView(View headerView) {
-            this.headerView = headerView;
-            notifyItemInserted(0);
-        }
-
-        @Override
-        public int getItemViewType(int position) {
-            if (position == 0) {
-                return VIEW_HEADER;
-            }
-            return VIEW_ITEM;
-        }
-
-        @Override
-        public ImageAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            if (viewType == VIEW_HEADER) {
-                return new ImageAdapter.ViewHolder(headerView);
-            } else {
-            View v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.recycler_item_view, parent, false);
-            return new ImageAdapter.ViewHolder(v);
-            }
-        }
-
-
-        @Override
-        public void onBindViewHolder(ImageAdapter.ViewHolder holder, int position) {
-            // pass
-//            if (list != null)
-//                holder.tv.setText(list.get(position));
-        }
-
-
-        @Override
-        public int getItemCount() {
-            return list != null ? list.size() : 0;
-        }
-
-
-        public class ViewHolder extends RecyclerView.ViewHolder {
-
-            public ViewHolder(View itemView) {
-                super(itemView);
-                itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(v.getContext(), "itemView"+v.getId(), Toast.LENGTH_LONG).show();
-                        L.e("This is RecyclerView Item");
-                    }
-                });
-            }
-        }
-    }
-
 }
