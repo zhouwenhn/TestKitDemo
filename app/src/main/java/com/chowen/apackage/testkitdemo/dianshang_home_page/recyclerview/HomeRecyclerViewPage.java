@@ -9,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class HomeRecyclerViewPage extends SupportFragment {
     private GridLayoutManager layoutManager;
 
 //    private LinearLayoutManager layoutManager;
+    private StaggeredGridLayoutManager sLayoutManager;
 
     public static HomeRecyclerViewPage newInstance() {
         HomeRecyclerViewPage fragment = new HomeRecyclerViewPage();
@@ -80,6 +82,7 @@ public class HomeRecyclerViewPage extends SupportFragment {
         }
 
 //        layoutManager = new LinearLayoutManager(getContext());
+//        sLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         layoutManager = new GridLayoutManager(getContext(), 2);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerList.setLayoutManager(layoutManager);
