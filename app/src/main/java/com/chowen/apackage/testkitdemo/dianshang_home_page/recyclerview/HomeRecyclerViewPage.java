@@ -1,7 +1,8 @@
 package com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -13,13 +14,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.chowen.apackage.testkitdemo.R;
-import com.chowen.apackage.testkitdemo.dianshang_home_page.adapter.HomeListAdapter;
-import com.chowen.apackage.testkitdemo.utils.L;
 import com.chowen.apackage.testkitdemo.viewpage.base.adapter.ViewPageAdapter;
 
 import java.util.ArrayList;
@@ -46,14 +42,19 @@ public class HomeRecyclerViewPage extends SupportFragment {
 
     private RecyclerAdapter mAdapter;
 
-//    private ListView mListView;
-
     private View mHeaderView;
 
     private GridLayoutManager layoutManager;
 
 //    private LinearLayoutManager layoutManager;
     private StaggeredGridLayoutManager sLayoutManager;
+
+    private Handler mHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+            mHandler.sendEmptyMessageDelayed(0, 3000);
+        }
+    };
 
     public static HomeRecyclerViewPage newInstance() {
         HomeRecyclerViewPage fragment = new HomeRecyclerViewPage();
@@ -102,14 +103,14 @@ public class HomeRecyclerViewPage extends SupportFragment {
             }
         });
 
-        initViewPager();
+        initHeaderViewPager();
     }
 
     private boolean isHeaderPosition(int position) {
         return position == 0;
     }
 
-    private void initViewPager() {
+    private void initHeaderViewPager() {
         mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
         mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
         mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
@@ -131,8 +132,25 @@ public class HomeRecyclerViewPage extends SupportFragment {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                switch (state) {
+                    case ViewPager.SCROLL_STATE_DRAGGING:
+                        mHandler.removeMessages(0);
+                        break;
+                    case ViewPager.SCROLL_STATE_IDLE:
+                        mHandler.sendEmptyMessageDelayed(0, 2000);
+                        break;
+                    default:
+                        break;
+                }
             }
         });
+
+        mHandler.sendEmptyMessageDelayed(0, 2000);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mHandler.removeMessages(0);
     }
 }

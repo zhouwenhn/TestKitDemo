@@ -11,7 +11,7 @@
         android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
-        android:src="@mipmap/view_img"/>
+        android:src="@mipmap/bg3"/>
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"

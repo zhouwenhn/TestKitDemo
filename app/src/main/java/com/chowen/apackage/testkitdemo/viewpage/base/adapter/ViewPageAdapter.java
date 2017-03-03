@@ -34,21 +34,14 @@ public class ViewPageAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        // ((ViewPager) container).removeView(mList.get(position % mList.size()));
+         ((ViewPager) container).removeView(mList.get(position % mList.size()));
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         L.e("instantiateItem>>>>"+position);
         position %= mList.size();
-        if (position < 0) {
-            position = mList.size() + position;
-        }
         View imageView = mList.get(position);
-        if (null != imageView.getParent()) {
-            ViewGroup viewGroup = (ViewGroup) imageView.getParent();
-            viewGroup.removeView(imageView);
-        }
         ((ViewPager) container).addView(imageView);
         return imageView;
     }
