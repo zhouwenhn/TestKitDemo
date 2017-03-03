@@ -15,12 +15,15 @@ import java.util.List;
  * Created by zhouwen on 2017/3/2.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder>
+        implements View.OnClickListener {
 
     private final static int VIEW_HEADER = 1;
     private final static int VIEW_ITEM = 0;
     private List<View> mList = new ArrayList<>();
     private View mHeaderView;
+
+    private IRecyclerListener mIRecyclerListener;
 
     public RecyclerAdapter(List<View> list) {
         mList = list;
@@ -30,6 +33,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         mHeaderView = headerView;
     }
 
+    public void setOnclickListener(IRecyclerListener iRecyclerListener) {
+        mIRecyclerListener = iRecyclerListener;
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -38,6 +44,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         } else {
             View itemView = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.recycler_item_view, parent, false);
+            itemView.setOnClickListener(this);
             return new ViewHolder(itemView);
         }
     }
@@ -60,7 +67,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return mList != null ? mList.size()+1 : 0;
+        return mList != null ? mList.size() + 1 : 0;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (mIRecyclerListener != null)
+            mIRecyclerListener.onItemClickListener(view);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

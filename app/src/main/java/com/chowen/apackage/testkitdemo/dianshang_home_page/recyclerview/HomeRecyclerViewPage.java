@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chowen.apackage.testkitdemo.R;
+import com.chowen.apackage.testkitdemo.utils.L;
 import com.chowen.apackage.testkitdemo.viewpage.base.adapter.ViewPageAdapter;
 
 import java.util.ArrayList;
@@ -69,15 +70,15 @@ public class HomeRecyclerViewPage extends SupportFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mView == null) {
             mView = inflater.inflate(R.layout.dianshang_recycler_home_page, container, false);
-            mRecyclerList = (RecyclerView) mView.findViewById(R.id.recycler_list);
 
             initRecyclerListView();
-
         }
         return mView;
     }
 
     private void initRecyclerListView() {
+        mRecyclerList = (RecyclerView) mView.findViewById(R.id.recycler_list);
+
         List<View> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             list.add(getActivity().getLayoutInflater().inflate(R.layout.recycler_item_view, null));
@@ -105,6 +106,13 @@ public class HomeRecyclerViewPage extends SupportFragment {
         });
 
         initHeaderViewPager();
+
+        mAdapter.setOnclickListener(new IRecyclerListener() {
+            @Override
+            public void onItemClickListener(View v) {
+                L.e("onItemClickListener>>>"+ v.getId());
+            }
+        });
     }
 
     private boolean isHeaderPosition(int position) {
@@ -134,12 +142,12 @@ public class HomeRecyclerViewPage extends SupportFragment {
             @Override
             public void onPageScrollStateChanged(int state) {
                 switch (state) {
-                    case ViewPager.SCROLL_STATE_DRAGGING:
-                        mHandler.removeMessages(0);
-                        break;
-                    case ViewPager.SCROLL_STATE_IDLE:
-                        mHandler.sendEmptyMessageDelayed(0, 2000);
-                        break;
+//                    case ViewPager.SCROLL_STATE_DRAGGING:
+//                        mHandler.removeMessages(0);
+//                        break;
+//                    case ViewPager.SCROLL_STATE_IDLE:
+//                        mHandler.sendEmptyMessageDelayed(0, 2000);
+//                        break;
                     default:
                         break;
                 }

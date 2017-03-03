@@ -6,22 +6,24 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="onPageScrollStateChanged" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d0590fe-26e0-49a6-9e9d-1d9ddfdf2d34" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dianshang_home_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dianshang_listview_home_page.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/IRecyclerListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/listview/HomeListPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/listview/HomeListPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/viewpage/base/adapter/ViewPageAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/viewpage/base/adapter/ViewPageAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="TestKitDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,32 +56,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeRecyclerViewPage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeRecyclerViewPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="-956">
+              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1483#1690#0" expanded="true" />
-                <element signature="e#1689#1690#0" expanded="true" />
-                <element signature="e#3342#3565#0" expanded="true" />
-                <element signature="e#3564#3565#0" expanded="true" />
-                <element signature="e#3658#3659#0" expanded="true" />
-                <element signature="e#3694#3695#0" expanded="true" />
+                <element signature="e#1531#1738#0" expanded="true" />
+                <element signature="e#1737#1738#0" expanded="true" />
+                <element signature="e#3386#3609#0" expanded="true" />
+                <element signature="e#3608#3609#0" expanded="true" />
+                <element signature="e#3681#3864#0" expanded="true" />
+                <element signature="e#3863#3864#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeListPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecyclerAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="75" column="50" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="50" />
+              <folding>
+                <element signature="e#795#796#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#873#874#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#1886#1887#0" expanded="true" />
+                <element signature="e#1945#1946#0" expanded="true" />
+                <element signature="e#2201#2202#0" expanded="true" />
+                <element signature="e#2240#2241#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRecyclerListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/IRecyclerListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeListPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/listview/HomeListPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="119">
+              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1304#1574#0" expanded="true" />
+                <element signature="e#1573#1574#0" expanded="true" />
+                <element signature="e#2835#3065#0" expanded="true" />
+                <element signature="e#3064#3065#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,7 +122,7 @@
       <file leaf-file-name="ViewPageAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/viewpage/base/adapter/ViewPageAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="187">
               <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="e#548#549#0" expanded="true" />
@@ -113,16 +147,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="799">
               <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#52445#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#8897#8898#0" expanded="false" />
-                <element signature="e#8951#8952#0" expanded="false" />
-                <element signature="e#45729#45730#0" expanded="false" />
-                <element signature="e#45765#45766#0" expanded="false" />
-                <element signature="e#49582#49583#0" expanded="false" />
-                <element signature="e#49643#49644#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,6 +160,7 @@
         <option value="Class" />
         <option value="JUnit4 Test Class" />
         <option value="ASClass" />
+        <option value="ASInterface" />
       </list>
     </option>
   </component>
@@ -2005,7 +2031,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/treadtest/MyThread2.java" />
         <option value="$PROJECT_DIR$/app/src/baidu/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/.gitignore" />
@@ -2042,7 +2067,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/HomeListPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/TestApplication.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ff.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dianshang_recycler_home_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/recycler_item_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/header_layout.xml" />
@@ -2053,9 +2077,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" />
         <option value="$USER_HOME$/Library/Android/sdk/sources/android-25/android/view/View.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/viewpage/base/adapter/ViewPageAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/listview/HomeListPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dianshang_home_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/IRecyclerListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java" />
       </list>
     </option>
   </component>
@@ -2239,7 +2265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2511,6 +2536,7 @@
         <subPane />
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3091,7 +3117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488510979046</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="update">
+      <created>1488511847607</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1488511847607</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3112,7 +3145,7 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29036826" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3895184" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3125,8 +3158,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19063005" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40934843" sideWeight="0.5347334" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24362606" sideWeight="0.54361874" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.70679885" sideWeight="0.5347334" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.49353796" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14872521" sideWeight="0.45799676" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22051696" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3164,11 +3197,11 @@
     <MESSAGE value="modify" />
     <MESSAGE value="test activity alias" />
     <MESSAGE value="add gitignore" />
-    <MESSAGE value="update" />
     <MESSAGE value="test BottomSheetBehavior" />
     <MESSAGE value="test" />
     <MESSAGE value="test recyclerview" />
-    <option name="LAST_COMMIT_MESSAGE" value="test recyclerview" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3190,13 +3223,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.3/jars/classes.jar!/com/squareup/leakcanary/LeakCanary.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -3330,16 +3356,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#52445#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8897#8898#0" expanded="false" />
-            <element signature="e#8951#8952#0" expanded="false" />
-            <element signature="e#45729#45730#0" expanded="false" />
-            <element signature="e#45765#45766#0" expanded="false" />
-            <element signature="e#49582#49583#0" expanded="false" />
-            <element signature="e#49643#49644#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3426,17 +3443,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recycler_item_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -3492,21 +3498,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/item6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/item8.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/item5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/item6.jpg" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/item8.jpg" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/item5.jpg" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/nav_icon_more.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -3517,16 +3511,6 @@
         <state relative-caret-position="158">
           <caret line="52" column="23" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding>
-            <element signature="e#732#733#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3588,27 +3572,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/viewpage/base/adapter/ViewPageAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="187">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="e#548#549#0" expanded="true" />
             <element signature="e#576#577#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1483#1690#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#3342#3565#0" expanded="true" />
-            <element signature="e#3564#3565#0" expanded="true" />
-            <element signature="e#3658#3659#0" expanded="true" />
-            <element signature="e#3694#3695#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3626,11 +3594,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/listview/HomeListPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="119">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1304#1574#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#2835#3065#0" expanded="true" />
+            <element signature="e#3064#3065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/IRecyclerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recycler_item_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/RecyclerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="75" column="50" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="50" />
+          <folding>
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2240#2241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chowen/apackage/testkitdemo/dianshang_home_page/recyclerview/HomeRecyclerViewPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-956">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1531#1738#0" expanded="true" />
+            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#3386#3609#0" expanded="true" />
+            <element signature="e#3608#3609#0" expanded="true" />
+            <element signature="e#3681#3864#0" expanded="true" />
+            <element signature="e#3863#3864#0" expanded="true" />
           </folding>
         </state>
       </provider>
