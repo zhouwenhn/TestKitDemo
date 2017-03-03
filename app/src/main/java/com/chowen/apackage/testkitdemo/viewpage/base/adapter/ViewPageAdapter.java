@@ -2,8 +2,10 @@ package com.chowen.apackage.testkitdemo.viewpage.base.adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.chowen.apackage.testkitdemo.utils.L;
 
@@ -14,11 +16,11 @@ import java.util.List;
  * @since 2017/2/26
  */
 
-public class ViewPageAdapter extends PagerAdapter {
+public class ViewPageAdapter<T extends View> extends PagerAdapter {
 
-    List<View> mList;
+    private SparseArray<T> mList;
 
-    public ViewPageAdapter(List<View> list) {
+    public ViewPageAdapter(SparseArray<T> list) {
         mList = list;
     }
 
@@ -34,14 +36,14 @@ public class ViewPageAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-         ((ViewPager) container).removeView(mList.get(position % mList.size()));
+         ((ViewPager) container).removeView((View) mList.get(position % mList.size()));
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         L.e("instantiateItem>>>>"+position);
         position %= mList.size();
-        View imageView = mList.get(position);
+        View imageView = (View) mList.get(position);
         ((ViewPager) container).addView(imageView);
         return imageView;
     }

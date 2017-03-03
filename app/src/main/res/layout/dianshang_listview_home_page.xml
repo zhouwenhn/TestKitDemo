@@ -4,19 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <com.chowen.apackage.testkitdemo.bar.Bar
         android:id="@+id/ll_top_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentTop="true" />
 
-    <!--android.support.v7.widget.RecyclerView-->
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ll_top_bar"
-        android:layout_marginTop="2dp" />
+        android:layout_below="@id/ll_top_bar" />
 
 </RelativeLayout>

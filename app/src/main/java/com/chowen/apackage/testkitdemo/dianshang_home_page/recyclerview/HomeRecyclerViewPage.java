@@ -11,6 +11,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class HomeRecyclerViewPage extends SupportFragment {
 
     private PagerAdapter mViewPageAdapter;
 
-    private List<View> mList = new ArrayList<>();
+    private SparseArray<View> mList = new SparseArray<>();
 
     private ViewPager mViewPager;
 
@@ -46,7 +47,7 @@ public class HomeRecyclerViewPage extends SupportFragment {
 
     private GridLayoutManager layoutManager;
 
-//    private LinearLayoutManager layoutManager;
+    //    private LinearLayoutManager layoutManager;
     private StaggeredGridLayoutManager sLayoutManager;
 
     private Handler mHandler = new Handler() {
@@ -111,10 +112,10 @@ public class HomeRecyclerViewPage extends SupportFragment {
     }
 
     private void initHeaderViewPager() {
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page4, null));
+        mList.append(0, getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
+        mList.append(1, getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
+        mList.append(2, getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
+        mList.append(3, getActivity().getLayoutInflater().inflate(R.layout.home_view_page4, null));
 
         mViewPager = (ViewPager) mHeaderView.findViewById(R.id.view_pager);
 

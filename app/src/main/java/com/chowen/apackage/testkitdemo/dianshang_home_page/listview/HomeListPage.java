@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class HomeListPage extends SupportFragment {
 
     private PagerAdapter mViewPageAdapter;
 
-    private List<View> mList = new ArrayList<>();
+    private SparseArray<View> mList = new SparseArray<>();
 
     private ViewPager mViewPager;
 
@@ -66,7 +67,7 @@ public class HomeListPage extends SupportFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mView == null) {
-            mView = inflater.inflate(R.layout.dianshang_home_page, container, false);
+            mView = inflater.inflate(R.layout.dianshang_listview_home_page, container, false);
 
             initViews();
             initViewPager();
@@ -101,10 +102,10 @@ public class HomeListPage extends SupportFragment {
     }
 
     private void initViewPager() {
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
-        mList.add(getActivity().getLayoutInflater().inflate(R.layout.home_view_page4, null));
+        mList.append(0, getActivity().getLayoutInflater().inflate(R.layout.home_view_page, null));
+        mList.append(1, getActivity().getLayoutInflater().inflate(R.layout.home_view_page2, null));
+        mList.append(2, getActivity().getLayoutInflater().inflate(R.layout.home_view_page3, null));
+        mList.append(3, getActivity().getLayoutInflater().inflate(R.layout.home_view_page4, null));
 
         mViewPager = (ViewPager) mHeaderView.findViewById(R.id.view_pager);
 
