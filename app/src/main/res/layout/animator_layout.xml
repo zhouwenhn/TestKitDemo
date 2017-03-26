@@ -1,66 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_start"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="属性动画" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="chowen"
-        android:textColor="@android:color/background_dark"
-        android:textSize="40dp" />
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="属性动画" />
 
-    <Button
-        android:id="@+id/btn_start_translation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="移动属性动画" />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="chowen"
+            android:textColor="@android:color/background_dark"
+            android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/tv_translation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="translation"
-        android:textColor="@android:color/background_dark"
-        android:textSize="40dp" />
+        <Button
+            android:id="@+id/btn_start_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="移动属性动画" />
 
-    <Button
-        android:id="@+id/btn_start_scaleY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="移动属性动画" />
+        <TextView
+            android:id="@+id/tv_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="translation"
+            android:textColor="@android:color/background_dark"
+            android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/tv_scaleY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="scaleY"
-        android:textColor="@android:color/background_dark"
-        android:textSize="40dp" />
+        <Button
+            android:id="@+id/btn_start_scaleY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="移动属性动画" />
 
-    <Button
-        android:id="@+id/btn_start_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="移动属性动画" />
+        <TextView
+            android:id="@+id/tv_scaleY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="scaleY"
+            android:textColor="@android:color/background_dark"
+            android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/tv_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="组合动画"
-        android:textColor="@android:color/background_dark"
-        android:textSize="40dp" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_start_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="移动属性动画" />
+
+        <TextView
+            android:id="@+id/tv_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="组合动画"
+            android:textColor="@android:color/background_dark"
+            android:textSize="40dp" />
+
+        <com.chowen.apackage.testkitdemo.animator.AnimatorView
+            android:layout_width="640dp"
+            android:layout_height="640dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>

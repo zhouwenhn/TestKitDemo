@@ -177,6 +177,13 @@ public class HomeFragment extends SupportFragment {
             }
         });
 
+        mView.findViewById(R.id.btn_animator_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                start(AnimatorPage.newInstance());
+            }
+        });
+
     }
 
     public void changeIcon11(View view) {

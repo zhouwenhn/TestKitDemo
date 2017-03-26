@@ -74,7 +74,7 @@ public class AnimatorPage extends SupportFragment {
             public void onClick(View v) {
                 mTextview = (TextView) mView.findViewById(R.id.tv_translation);
                 float curTranslationX = mTextview.getTranslationX();
-                ObjectAnimator oba = ObjectAnimator.ofFloat(mTextview, "translationX",
+                ObjectAnimator oba = ObjectAnimator.ofFloat(mTextview, "translationY",
                         curTranslationX, -800, curTranslationX);
                 oba.setDuration(DURATION_TIME);
                 oba.start();
@@ -99,11 +99,14 @@ public class AnimatorPage extends SupportFragment {
                 TextView textview = (TextView) mView.findViewById(R.id.tv_a);
                 float curTranslationX = textview.getTranslationX();
                 ObjectAnimator moveIn = ObjectAnimator.ofFloat(textview, "translationX", -500f, 0f);
+                moveIn.setDuration(8000);
                 ObjectAnimator rotate = ObjectAnimator.ofFloat(textview, "rotation", 0f, 360f);
+                rotate.setDuration(4000);
                 ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(textview, "alpha", 1f, 0f, 1f);
+                fadeInOut.setDuration(1000*10);
                 AnimatorSet set = new AnimatorSet();
-                set.play(moveIn).with(fadeInOut).after(rotate);
-                set.setDuration(DURATION_TIME);
+                set.play(rotate).with(fadeInOut).after(moveIn);
+//                set.setDuration(DURATION_TIME);
                 set.start();
                 set.addListener(new Animator.AnimatorListener() {
                     @Override

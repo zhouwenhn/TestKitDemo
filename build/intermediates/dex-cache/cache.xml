@@ -3,206 +3,17 @@
 
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-watcher/1.3/632482a61ad24b7ec864072945d221369f9a606/leakcanary-watcher-1.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0632482a61ad24b7ec864072945d221369f9a606">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/leakcanary-watcher-1.3_5ae57f27f744da5bb1eb6ff20fcda771581f2e77.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/me.yokeyword/fragmentation/0.8.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a9d7bd5926b39bfc074a5fbbc2115e448deb26c2">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/me.yokeyword-fragmentation-0.8.2_d074d75af95c508cb32d1d887527b77d0eca948e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.0_e1de1d225cd744b66c8dda3128cfbd53f6892e66.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.0_78a28e12620f49289aa9be9bbd283b1bca2101d1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.0.0_a2072a6a5229d1a4dc1f042ad7f2b0aa3dbcd7fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d51415172c0f7ab758142157891a09f870a4a1e7">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_3fafbfde23d7400e36ebace88654d0f2e011d5f1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.android/build-cache/7bab122823e51ef41714c627308eb8a3e3968ed7/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.0_25ba4c0d3bd1afb1205e0c0aaafadd276e1fddbb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d20672631818754557255886d3feb43e7fe75a66">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.0_24212557c1bf884733303ec4fd53cb6bb12cc571.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.0_9138f62b40b7b1e0b0e2f236d13e9b59b2aaa949.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.antfortune.freeline/runtime/0.8.4/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="611bdfa0266e6a0bb9865118c5206b0d992f91d9">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.antfortune.freeline-runtime-0.8.4_cd5153b5c992e07fd12f6648a47c43d0fe7c6ebc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_bf855211efa415aa83342b785c40bfa7a8f98101.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.0_6ddfc8069ab22ce125c07d11b362a5dab24ca7f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0/constraint-layout-solver-1.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0_097c6416ada7074c3cb63c560b3aabdd0b5c10aa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_30dac445847689c8b6d4619becce37989ec4b13c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.haha/haha/1.1/b7b2e61ee1ad2d1ac6ae3122de9c940fb0d0e635/haha-1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b7b2e61ee1ad2d1ac6ae3122de9c940fb0d0e635">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/haha-1.1_be307f25be89a1e6578de34dacf3f9bbfb93a1a0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.3/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f4e7adebf49e683db82fb6efac2caaf3d768b8d4">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.squareup.leakcanary-leakcanary-android-1.3_5b02b2837c7bd54a45185671970da1411099ecf7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_57c73844d23c143a10dd559c4d4be6fc5c64b37f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.0_1f93a94eb1ec7da6a760f19581c1714a9d93a632.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.0.0_c0f5e02450c053d9138ac364a309f23dc53f41cd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.0_698098c962477927f923a09990034c16ffd706c5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.0_20ba1728c17bab567e4c101a05f14a83fbafca24.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.0_8b92ecb68bff8e609b61040ebc7d0961a7740adf.jar" />
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_a294cbd9736c086f6aba5b275b1a5062780fbdf9.jar" />
     </item>
     <item
         is-multidex="false"
         jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-analyzer/1.3/c5399b18a672f7973c8a9b9d6b731a3a36e590cc/leakcanary-analyzer-1.3.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="c5399b18a672f7973c8a9b9d6b731a3a36e590cc">
@@ -210,57 +21,246 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.0/jars/classes.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.android/build-cache/c2143d6486c86a72a12874884118e0923be718ce/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_4c007d57581529d1ee7f87d2c1a0022214f62e23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/5d42027f5d24563c47ab81c967b7e7bd7e1d6d01/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_a7998000618c3da1b97739c07d4ab82d107433e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/cef5b27f3c810535eaae52ffbd37f9ba3e52cb7a/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6907a646412d8cad0eb6fceeee3e1fca4363ed9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/f4b3ab5ac6e2a429733e50c72689adc79cb080df/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="611bdfa0266e6a0bb9865118c5206b0d992f91d9">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_15389fcd8b3a2fead5374079e1248af9d0ef4781.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-watcher/1.3/632482a61ad24b7ec864072945d221369f9a606/leakcanary-watcher-1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0632482a61ad24b7ec864072945d221369f9a606">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/leakcanary-watcher-1.3_5ae57f27f744da5bb1eb6ff20fcda771581f2e77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/99018f5274eec092ef68d0774e2a8e75995193e5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_7a07300e334bb2793082d9ec105c77917c581aed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/3ed2c614735545671268dab9681f900795824cd0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a9d7bd5926b39bfc074a5fbbc2115e448deb26c2">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_3ea21b1f9e414ba6b9cc7f3a76977ddab19b37d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/face127a5c0e887b45cdd3f2145d563bd99c754b/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.0_9270451a571d4578711795afc888ee6a82491afc.jar" />
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_1eebfebf14bd18aaa9fed83cca2de6aaecf8a702.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.android/build-cache/1aa5c4535fd02c1d3a18f9b68b5b6cfcfe76b227/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6af4e97e66807c2d9b5922404ec08b607b5f0e95.jar" />
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_7c52b00c724f86c79fae18161e3d74f49612cb7e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.android/build-cache/52d2f331949aa0e48efe45a400a7320bd76ad31c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_37470f36ef50cdb3b13ac5e384d44e7c70c27c4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/f0f1f25b5bf5167579eae44078a479ce5b760b71/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_35d20f43c1ae11c2151480c62db45566188095fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/9478ac4e6be95ae446f8a694878d254df4c802da/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_8522ff8d905696cd59463c2f68bee6ad7d75d8e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_bf855211efa415aa83342b785c40bfa7a8f98101.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/165990aed1948664fd581d65c792a043972c5e90/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_775f44e02fe31ae0271f87dc71b9fc6e91abdcdf.jar" />
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_36bed47eec843d045ee1053ac5892dec00eca573.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/me.henrytao/smooth-app-bar-layout/0.2.1/jars/classes.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.0/748f0546d5c3c27f1aef07270ffea0c45f0c42a4/rxjava-1.1.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="1566dabeb3a39c082eccbc7490e36b50e0a94311">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/me.henrytao-smooth-app-bar-layout-0.2.1_1d705bee9852369488fe44244c4b53bb2179271f.jar" />
+        sha1="748f0546d5c3c27f1aef07270ffea0c45f0c42a4">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/rxjava-1.1.0_d40248a8f6061a7a204c084727ef74a23dbcffc5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.android/build-cache/7bab122823e51ef41714c627308eb8a3e3968ed7/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_5060d3a2f157f1d26ad0351b2344d00edb14a999.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0/constraint-layout-solver-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0_097c6416ada7074c3cb63c560b3aabdd0b5c10aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/1aa5c4535fd02c1d3a18f9b68b5b6cfcfe76b227/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_cefb9f670b419996c0f0758542505c7e7d4bfbb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/1868ba666f6d42e27b341c5688333af2de4f30b2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_bb0caf8dcf4a2e7fa3b6f26c397131bac2b01576.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/a2e3389305934127680ec633a756688731e949a1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_7e4816a90516aa0acf65bed803bc91ab978c44df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/585ff5c515330166147cf77f6fef95a118218363/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_55b29162f78046ef8195cd51f4813190d2c0c4f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/a2e3389305934127680ec633a756688731e949a1/output/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_5b0b8ef428ab65c086dd81889de0f3db429a80f3.jar" />
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_f4db8c29c98181d85e538a08a80dc658ade95da7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        jar="/Users/zhouwen/.gradle/caches/modules-2/files-2.1/com.squareup.haha/haha/1.1/b7b2e61ee1ad2d1ac6ae3122de9c940fb0d0e635/haha-1.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="b19c128bcd7007caeb679750797ad7ac5dbfabd3">
-        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/instant-run_4bf1348e7176223cda2e64cd4a855101bdb5cb1f.jar" />
+        sha1="b7b2e61ee1ad2d1ac6ae3122de9c940fb0d0e635">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/haha-1.1_be307f25be89a1e6578de34dacf3f9bbfb93a1a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/3cc077601a1a9b1bd9a24085ca230ced7bf18920/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f4e7adebf49e683db82fb6efac2caaf3d768b8d4">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_0c1ec88282269a729b7d6d63453ddfc7fa4656db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/165990aed1948664fd581d65c792a043972c5e90/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_2b8c523b4d94f5b318563b6b3b0fbaec83765fb2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/cef5b27f3c810535eaae52ffbd37f9ba3e52cb7a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_ceb938d0c234dd693a81497bf2bf20624802b350.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zhouwen/.android/build-cache/77bc9e09cdf71dcfce4e801d543bd9981747c628/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1566dabeb3a39c082eccbc7490e36b50e0a94311">
+        <dex dex="/Users/zhouwen/project/学习/demo_test/TestKit/TestKitDemo/app/build/intermediates/pre-dexed/debug/classes_088621529f413b07c6afc97b89445f04d4b6d912.jar" />
     </item>
 
 </items>

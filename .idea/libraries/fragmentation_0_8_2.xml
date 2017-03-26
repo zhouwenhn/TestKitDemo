@@ -4,8 +4,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/me.yokeyword/fragmentation/0.8.2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/me.yokeyword/fragmentation/0.8.2/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/me.yokeyword/fragmentation/0.8.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/3ed2c614735545671268dab9681f900795824cd0/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/3ed2c614735545671268dab9681f900795824cd0/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
