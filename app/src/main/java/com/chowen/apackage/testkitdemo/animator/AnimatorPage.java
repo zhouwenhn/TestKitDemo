@@ -135,6 +135,13 @@ public class AnimatorPage extends SupportFragment {
         Animator animator = AnimatorInflater.loadAnimator(getContext(), R.animator.animator_value);
         animator.setTarget(mTv);
         animator.start();
+
+        mView.findViewById(R.id.path).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                start(PathPage.newInstance());
+            }
+        });
     }
 
     private void initAnimators() {

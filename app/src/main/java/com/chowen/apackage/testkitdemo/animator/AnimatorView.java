@@ -74,8 +74,22 @@ public class AnimatorView extends RelativeLayout{
 
         path.lineTo(200, 200);                      // lineTo
         path.lineTo(200,0);
-
+        path.close();
         canvas.drawPath(path, mPaint);
+
+        Path path5 = new Path();
+
+        path5.moveTo(170, 410);
+
+        path5.lineTo(230, 410);
+
+        path5.lineTo(215, 350);
+
+        path5.lineTo(185, 350);
+
+        path5.close();
+
+        canvas.drawPath(path5, mPaint);
 
 //        mPath.moveTo(140,180);
 //        mPath.lineTo(240,180);
