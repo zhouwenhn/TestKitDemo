@@ -3,11 +3,18 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.chowen.apackage.testkitdemo.dianshang_home_page.RoundImageView
         android:id="@+id/btn_view_pager"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/view_img" />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_below="@+id/btn_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="tag"/>
 
 </RelativeLayout>

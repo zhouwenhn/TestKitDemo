@@ -22,6 +22,7 @@ import android.widget.EditText;
 
 import com.chowen.apackage.testkitdemo.animator.AnimatorPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.listview.HomeListPage;
+import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerScrollViewPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerViewPage;
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.chowen.apackage.testkitdemo.R;
 
@@ -62,6 +63,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         if (position == 0) {
             return;
         }
+        holder.tv.setText(String.valueOf(position));
         // TODO: 2017/3/2 positon>1的处理
     }
 
@@ -77,9 +79,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-
+  TextView tv;
         public ViewHolder(View itemView) {
             super(itemView);
+            tv = (TextView) itemView.findViewById(R.id.tv);
         }
     }
 }
