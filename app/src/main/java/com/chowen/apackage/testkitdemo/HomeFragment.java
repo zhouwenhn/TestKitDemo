@@ -24,6 +24,7 @@ import com.chowen.apackage.testkitdemo.animator.AnimatorPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.listview.HomeListPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerScrollViewPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerViewPage;
+import com.chowen.apackage.testkitdemo.horgridview.HorizontalGridViewFragment;
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
 import java.util.List;
@@ -182,6 +183,12 @@ public class HomeFragment extends SupportFragment {
             @Override
             public void onClick(View view) {
                 start(AnimatorPage.newInstance());
+            }
+        });
+        mView.findViewById(R.id.btn_grid_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                start(HorizontalGridViewFragment.newInstance());
             }
         });
 

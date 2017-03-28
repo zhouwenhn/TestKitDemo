@@ -72,6 +72,13 @@
             android:layout_centerInParent="true"
             android:text="test自定义View"
             android:textSize="20sp" />
+        <Button
+            android:id="@+id/btn_grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="横向gridview"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
