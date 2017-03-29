@@ -1,21 +1,17 @@
 package com.chowen.apackage.testkitdemo.horgridview;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chowen.apackage.testkitdemo.R;
-import com.chowen.apackage.testkitdemo.animator.AnimatorPage;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.NemoBaseAdapter;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.ViewHolderHelper;
 
@@ -53,22 +49,26 @@ public class HorizontalGridViewFragment extends SupportFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (mView == null){
+        if (mView == null) {
             mView = inflater.inflate(R.layout.gridview_page, container, false);
             gridView = (GridView) mView.findViewById(R.id.grid);
             horizontalScrollView = (HorizontalScrollView) mView.findViewById(R.id.scrollView);
             horizontalScrollView.setHorizontalScrollBarEnabled(false);// 隐藏滚动条
+
+            mView.findViewById(R.id.ll_view).getBackground().setAlpha(200);//0~255透明度值 ，0为完全透明，255为不透明
+
             setData();
             setValue();
         }
 
         return mView;
     }
+
     private void setValue() {
-        NemoBaseAdapter adapter = new NemoBaseAdapter<CityItem>(getActivity(),cityList,R.layout.grid_item_view) {
+        NemoBaseAdapter adapter = new NemoBaseAdapter<CityItem>(getActivity(), cityList, R.layout.grid_item_view) {
             @Override
             protected void buildItemView(ViewHolderHelper viewHolder, CityItem item, int position) {
-                ((TextView)viewHolder.getItemView(R.id.text)).setText(String.valueOf(position));
+                ((TextView) viewHolder.getItemView(R.id.text)).setText(String.valueOf(position));
             }
         };
         gridView.setAdapter(adapter);
@@ -93,7 +93,9 @@ public class HorizontalGridViewFragment extends SupportFragment {
         }
     }
 
-    /**设置数据*/
+    /**
+     * 设置数据
+     */
     private void setData() {
         cityList = new ArrayList<CityItem>();
         CityItem item = new CityItem();

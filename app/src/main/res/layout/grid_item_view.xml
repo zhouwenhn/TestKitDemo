@@ -4,20 +4,34 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <com.chowen.apackage.testkitdemo.dianshang_home_page.RoundImageView
-        android:id="@+id/iv"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/view_img"/>
+    <FrameLayout
+        android:id="@+id/fl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.chowen.apackage.testkitdemo.dianshang_home_page.RoundImageView
+            android:id="@+id/iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/view_img" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:src="@mipmap/chat_group_entrance_new" />
+
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_layout"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/iv"
+        android:text="Text"
         android:textColor="@color/colorAccent"
-        android:textSize="26dp"
-        android:text="Text" />
+        android:textSize="26dp" />
 </RelativeLayout>
