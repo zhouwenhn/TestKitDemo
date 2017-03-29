@@ -68,7 +68,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
         NemoBaseAdapter adapter = new NemoBaseAdapter<CityItem>(getActivity(),cityList,R.layout.grid_item_view) {
             @Override
             protected void buildItemView(ViewHolderHelper viewHolder, CityItem item, int position) {
-
+                ((TextView)viewHolder.getItemView(R.id.text)).setText(String.valueOf(position));
             }
         };
         gridView.setAdapter(adapter);
@@ -139,6 +139,15 @@ public class HorizontalGridViewFragment extends SupportFragment {
         item = new CityItem();
         item.setCityName("武汉");
         item.setCityCode("027");
+        cityList.add(item);
+        cityList.add(item);
+        item = new CityItem();
+        item.setCityName("武汉");
+        item.setCityCode("027");
+        cityList.add(item);
+        item = new CityItem();
+        item.setCityName("孝感");
+        item.setCityCode("0712");
         cityList.add(item);
         item = new CityItem();
         item.setCityName("孝感");
