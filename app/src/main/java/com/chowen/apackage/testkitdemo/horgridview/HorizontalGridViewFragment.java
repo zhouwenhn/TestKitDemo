@@ -83,7 +83,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
                 LinearLayout.LayoutParams.WRAP_CONTENT);
 
         gridView.setLayoutParams(params);
-        gridView.setColumnWidth(dm.widthPixels / NUM);
+        gridView.setColumnWidth(180);
         // gridView.setHorizontalSpacing(hSpacing);
         gridView.setStretchMode(GridView.NO_STRETCH);
         if (count <= 3) {
