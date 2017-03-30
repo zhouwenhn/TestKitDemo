@@ -15,11 +15,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
-            <GridView
+            <com.chowen.apackage.testkitdemo.horgridview.MyGridView
                 android:id="@+id/grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:numColumns="2"/>
+                android:numColumns="auto_fit"/>
         </LinearLayout>
     </HorizontalScrollView>
 

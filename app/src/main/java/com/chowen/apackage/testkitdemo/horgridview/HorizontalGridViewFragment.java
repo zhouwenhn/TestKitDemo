@@ -142,7 +142,6 @@ public class HorizontalGridViewFragment extends SupportFragment {
         item.setCityName("武汉");
         item.setCityCode("027");
         cityList.add(item);
-        cityList.add(item);
         item = new CityItem();
         item.setCityName("武汉");
         item.setCityCode("027");
@@ -155,7 +154,14 @@ public class HorizontalGridViewFragment extends SupportFragment {
         item.setCityName("孝感");
         item.setCityCode("0712");
         cityList.add(item);
-        cityList.addAll(cityList);
+        item = new CityItem();
+        item.setCityName("武汉");
+        item.setCityCode("027");
+        cityList.add(item);
+        item = new CityItem();
+        item.setCityName("武汉");
+        item.setCityCode("027");
+        cityList.add(item);
     }
 
     public class CityItem {
