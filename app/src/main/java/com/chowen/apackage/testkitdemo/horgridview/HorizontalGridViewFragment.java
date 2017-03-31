@@ -79,11 +79,11 @@ public class HorizontalGridViewFragment extends SupportFragment {
         dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(columns * dm.widthPixels / NUM,
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(columns * 240,//dm.widthPixels / NUM
                 LinearLayout.LayoutParams.WRAP_CONTENT);
 
         gridView.setLayoutParams(params);
-        gridView.setColumnWidth(180);
+        gridView.setColumnWidth(240);
         // gridView.setHorizontalSpacing(hSpacing);
         gridView.setStretchMode(GridView.NO_STRETCH);
         if (count <= 3) {

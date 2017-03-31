@@ -25,11 +25,16 @@ import com.chowen.apackage.testkitdemo.dianshang_home_page.listview.HomeListPage
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerScrollViewPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerViewPage;
 import com.chowen.apackage.testkitdemo.horgridview.HorizontalGridViewFragment;
+import com.chowen.apackage.testkitdemo.rxbus.RxBus;
+import com.chowen.apackage.testkitdemo.rxbus.RxBusTest;
+import com.chowen.apackage.testkitdemo.rxbus.StudentEvent;
+import com.chowen.apackage.testkitdemo.utils.L;
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
 import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
+import rx.functions.Action1;
 
 import static android.content.Context.ACTIVITY_SERVICE;
 
@@ -79,6 +84,14 @@ public class HomeFragment extends SupportFragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             //setTranslucentStatus(true);
         }
+
+        RxBus.getInstance().toObserverable(StudentEvent.class)
+                .subscribe(new Action1<StudentEvent>() {
+                    @Override
+                    public void call(StudentEvent studentEvent) {
+                        L.e("id:"+ studentEvent.getId()+"  name:"+ studentEvent.getName());
+                    }
+                });
         return mView;
     }
 
@@ -191,7 +204,12 @@ public class HomeFragment extends SupportFragment {
                 start(HorizontalGridViewFragment.newInstance());
             }
         });
-
+        mView.findViewById(R.id.btn_rxbus).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                start(RxBusTest.newInstance());
+            }
+        });
     }
 
     public void changeIcon11(View view) {
