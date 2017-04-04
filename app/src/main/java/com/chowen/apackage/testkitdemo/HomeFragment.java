@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.TextInputLayout;
@@ -31,6 +32,7 @@ import com.chowen.apackage.testkitdemo.rxbus.StudentEvent;
 import com.chowen.apackage.testkitdemo.utils.L;
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
+import java.io.File;
 import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
@@ -208,6 +210,7 @@ public class HomeFragment extends SupportFragment {
             @Override
             public void onClick(View v) {
                 start(RxBusTest.newInstance());
+
             }
         });
     }

@@ -6,6 +6,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
@@ -36,6 +37,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
     HorizontalScrollView horizontalScrollView;
     GridView gridView;
     DisplayMetrics dm;
+    NemoBaseAdapter adapter;
     private int NUM = 4; // 每行显示个数
     private int hSpacing = 20;// 水平间距
 
@@ -57,6 +59,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
 
             mView.findViewById(R.id.ll_view).getBackground().setAlpha(200);//0~255透明度值 ，0为完全透明，255为不透明
 
+            initViews();
             setData();
             setValue();
         }
@@ -64,11 +67,26 @@ public class HorizontalGridViewFragment extends SupportFragment {
         return mView;
     }
 
+    private void initViews() {
+        MyGridView  gv= (MyGridView) mView.findViewById(R.id.grid);
+        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                CityItem cityItem  = cityList.get(position);
+                cityItem.cityName = "广州";
+                cityItem.cityCode = "12345";
+                adapter.notifyDataSetChanged();
+
+            }
+        });
+    }
+
     private void setValue() {
-        NemoBaseAdapter adapter = new NemoBaseAdapter<CityItem>(getActivity(), cityList, R.layout.grid_item_view) {
+        adapter = new NemoBaseAdapter<CityItem>(getActivity(), cityList, R.layout.grid_item_view) {
             @Override
             protected void buildItemView(ViewHolderHelper viewHolder, CityItem item, int position) {
-                ((TextView) viewHolder.getItemView(R.id.text)).setText(String.valueOf(position));
+                ((TextView) viewHolder.getItemView(R.id.text)).setText(item.cityName);
             }
         };
         gridView.setAdapter(adapter);
@@ -118,9 +136,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
         item.setCityName("武汉");
         item.setCityCode("027");
         cityList.add(item);
-        item = new CityItem();
-        item.setCityName("孝感");
-        item.setCityCode("0712");
+
 
         item = new CityItem();
         item.setCityName("北京");
