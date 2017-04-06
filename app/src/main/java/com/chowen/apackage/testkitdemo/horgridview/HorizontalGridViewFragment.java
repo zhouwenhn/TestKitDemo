@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.chowen.apackage.testkitdemo.R;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.NemoBaseAdapter;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.ViewHolderHelper;
+import com.chowen.apackage.testkitdemo.utils.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +87,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
         adapter = new NemoBaseAdapter<CityItem>(getActivity(), cityList, R.layout.grid_item_view) {
             @Override
             protected void buildItemView(ViewHolderHelper viewHolder, CityItem item, int position) {
-                ((TextView) viewHolder.getItemView(R.id.text)).setText(item.cityName);
+                ((TextView) viewHolder.getItemView(R.id.text)).setText(item.cityName+position);
             }
         };
         gridView.setAdapter(adapter);
@@ -94,12 +95,14 @@ public class HorizontalGridViewFragment extends SupportFragment {
         int count = adapter.getCount();
         int columns = (count % 2 == 0) ? count / 2 : count / 2 + 1;
 
+        int temp = (count % 2 == 0) ? 0 : 280;
+
         dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(columns * 240,//dm.widthPixels / NUM
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(columns*280+ temp,//dm.widthPixels / NUM
                 LinearLayout.LayoutParams.WRAP_CONTENT);
-
+        L.e("columns * 240>>>>"+columns * 240+">>"+(columns * 240)/columns+">>>"+count);
         gridView.setLayoutParams(params);
         gridView.setColumnWidth(240);
         // gridView.setHorizontalSpacing(hSpacing);
