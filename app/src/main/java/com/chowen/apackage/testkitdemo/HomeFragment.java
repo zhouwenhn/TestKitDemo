@@ -25,11 +25,13 @@ import com.chowen.apackage.testkitdemo.animator.AnimatorPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.listview.HomeListPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerScrollViewPage;
 import com.chowen.apackage.testkitdemo.dianshang_home_page.recyclerview.HomeRecyclerViewPage;
+import com.chowen.apackage.testkitdemo.horgridview.HorizontalFragment;
 import com.chowen.apackage.testkitdemo.horgridview.HorizontalGridViewFragment;
 import com.chowen.apackage.testkitdemo.rxbus.RxBus;
 import com.chowen.apackage.testkitdemo.rxbus.RxBusTest;
 import com.chowen.apackage.testkitdemo.rxbus.StudentEvent;
 import com.chowen.apackage.testkitdemo.utils.L;
+import com.chowen.apackage.testkitdemo.utils.TimeUtil;
 import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 
 import java.io.File;
@@ -209,8 +211,8 @@ public class HomeFragment extends SupportFragment {
         mView.findViewById(R.id.btn_rxbus).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                start(RxBusTest.newInstance());
-
+                start(HorizontalFragment.newInstance());
+//                L.e("Current##"+TimeUtil.getCurrent(getContext()));
             }
         });
     }

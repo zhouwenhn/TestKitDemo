@@ -1,7 +1,9 @@
 package com.chowen.apackage.testkitdemo.horgridview;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chowen.apackage.testkitdemo.R;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.NemoBaseAdapter;
@@ -18,6 +21,8 @@ import com.chowen.apackage.testkitdemo.horgridview.adapter.ViewHolderHelper;
 import com.chowen.apackage.testkitdemo.utils.L;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
@@ -69,15 +74,17 @@ public class HorizontalGridViewFragment extends SupportFragment {
     }
 
     private void initViews() {
-        MyGridView  gv= (MyGridView) mView.findViewById(R.id.grid);
+        MyGridView gv = (MyGridView) mView.findViewById(R.id.grid);
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                CityItem cityItem  = cityList.get(position);
+                CityItem cityItem = cityList.get(position);
                 cityItem.cityName = "广州";
                 cityItem.cityCode = "12345";
                 adapter.notifyDataSetChanged();
+
+                Toast.makeText(getContext(), String.valueOf(position), Toast.LENGTH_LONG).show();
 
             }
         });
@@ -87,32 +94,42 @@ public class HorizontalGridViewFragment extends SupportFragment {
         adapter = new NemoBaseAdapter<CityItem>(getActivity(), cityList, R.layout.grid_item_view) {
             @Override
             protected void buildItemView(ViewHolderHelper viewHolder, CityItem item, int position) {
-                ((TextView) viewHolder.getItemView(R.id.text)).setText(item.cityName+position);
+                ((TextView) viewHolder.getItemView(R.id.text)).setText(item.cityName + position);
             }
         };
         gridView.setAdapter(adapter);
 
-        int count = adapter.getCount();
-        int columns = (count % 2 == 0) ? count / 2 : count / 2 + 1;
+//        L.e(">getWidth>>>"+ gridView.getColumnWidth());
 
-        int temp = (count % 2 == 0) ? 0 : 280;
+        int count = adapter.getCount();
+        int columns;
+//        if (count == 2){
+//            columns = 2;
+//            count = 3;
+//        } else {
+
+        columns = (count % 2 == 0) ? count / 2 : count / 2 + 1;
+//        }
+        L.e("columns * 240>>>>" + "columns>>" + columns + ">count>>" + count);
 
         dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(columns*280+ temp,//dm.widthPixels / NUM
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(columns * 260,//dm.widthPixels / NUM
                 LinearLayout.LayoutParams.WRAP_CONTENT);
-        L.e("columns * 240>>>>"+columns * 240+">>"+(columns * 240)/columns+">>>"+count);
+        L.e("columns>>>>" + columns * 260 + ">>>>>" + count);
         gridView.setLayoutParams(params);
-        gridView.setColumnWidth(240);
-        // gridView.setHorizontalSpacing(hSpacing);
+        gridView.setColumnWidth(220);
         gridView.setStretchMode(GridView.NO_STRETCH);
-        if (count <= 3) {
+
+        if (count < 3) {
             gridView.setNumColumns(count);
         } else {
             gridView.setNumColumns(columns);
         }
     }
+
+    //ment>>setValue#106: columns * 240>>>>columns>>2>count>>3
 
     /**
      * 设置数据
@@ -131,56 +148,62 @@ public class HorizontalGridViewFragment extends SupportFragment {
         item.setCityName("广州");
         item.setCityCode("020");
         cityList.add(item);
-        item = new CityItem();
-        item.setCityName("北京");
-        item.setCityCode("010");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("武汉");
-        item.setCityCode("027");
-        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("北京");
+//        item.setCityCode("010");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("武汉");
+//        item.setCityCode("027");
+//        cityList.add(item);
+////
+////
+//        item = new CityItem();
+//        item.setCityName("北京");
+//        item.setCityCode("010");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("武汉");
+//        item.setCityCode("027");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("孝感");
+//        item.setCityCode("0712");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("北京");
+//        item.setCityCode("010");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("武汉2");
+//        item.setCityCode("027");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("武汉");
+//        item.setCityCode("027");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("孝感2");
+//        item.setCityCode("0712");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("孝感");
+//        item.setCityCode("0712");
+//        cityList.add(item);
+//        item = new CityItem();
+//        item.setCityName("武汉");
+//        item.setCityCode("027");
+//        cityList.add(item);
 
+//        Collections.reverse(cityList);
 
-        item = new CityItem();
-        item.setCityName("北京");
-        item.setCityCode("010");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("武汉");
-        item.setCityCode("027");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("孝感");
-        item.setCityCode("0712");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("北京");
-        item.setCityCode("010");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("武汉");
-        item.setCityCode("027");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("武汉");
-        item.setCityCode("027");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("孝感");
-        item.setCityCode("0712");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("孝感");
-        item.setCityCode("0712");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("武汉");
-        item.setCityCode("027");
-        cityList.add(item);
-        item = new CityItem();
-        item.setCityName("武汉");
-        item.setCityCode("027");
-        cityList.add(item);
+//        List<CityItem> lists = new ArrayList<>();
+//        for (int i = cityList.size(); i > 0; i--) {
+//            lists.add(cityList.get(i-1));
+//        }
+//        cityList.clear();
+//        cityList.addAll(lists);
+
     }
 
     public class CityItem {
