@@ -1,51 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent">
 
-    <HorizontalScrollView
-        android:id="@+id/scrollView"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.chowen.apackage.testkitdemo.horgridview.MyGridView
+                    android:id="@+id/grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="20dp"
+                    android:numColumns="auto_fit" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/black"
+            android:visibility="gone"
+            tools:visibility="visible">
 
-            <com.chowen.apackage.testkitdemo.horgridview.MyGridView
-                android:id="@+id/grid"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:horizontalSpacing="20dp"
-                android:numColumns="auto_fit"/>
+                android:text="chowenchowenchowen"
+                android:textColor="@color/colorAccent" />
         </LinearLayout>
-    </HorizontalScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:background="@android:color/black"
-        android:layout_height="100dp">
-        <TextView
+        <LinearLayout
+            android:id="@+id/ll_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/black"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chowenchowenchowen"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:text="chowenchowenchowen"/>
-    </LinearLayout>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
 
-    <LinearLayout
-        android:id="@+id/ll_view"
-        android:layout_width="match_parent"
-        android:background="@android:color/black"
-        android:layout_height="100dp">
-        <TextView
+        <ImageView
+            android:id="@+id/iv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:text="chowenchowenchowen"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
     </LinearLayout>
-
-</LinearLayout>
-
+</ScrollView>

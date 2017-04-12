@@ -1,5 +1,6 @@
 package com.chowen.apackage.testkitdemo.horgridview;
 
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import android.widget.Toast;
 import com.chowen.apackage.testkitdemo.R;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.NemoBaseAdapter;
 import com.chowen.apackage.testkitdemo.horgridview.adapter.ViewHolderHelper;
+import com.chowen.apackage.testkitdemo.utils.BitmapUtil;
 import com.chowen.apackage.testkitdemo.utils.L;
 
 import java.util.ArrayList;
@@ -88,6 +91,16 @@ public class HorizontalGridViewFragment extends SupportFragment {
 
             }
         });
+        ((ImageView)mView.findViewById(R.id.iv)).setImageBitmap(BitmapUtil.toRoundBitmap(
+                BitmapFactory.decodeResource(getResources(),R.mipmap.view_img)));
+        ((ImageView)mView.findViewById(R.id.iv2)).setImageBitmap(BitmapUtil.centerSquareScaleBitmap(
+                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic),386));
+        ((ImageView)mView.findViewById(R.id.iv3)).setImageBitmap(BitmapUtil.centerSquareScaleBitmap(
+                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic1),386));
+        ((ImageView)mView.findViewById(R.id.iv4)).setImageBitmap(BitmapUtil.centerSquareScaleBitmap(
+                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic2),386));
+//        ((ImageView)mView.findViewById(R.id.iv2)).setImageBitmap(BitmapUtil.cropBitmap(
+//                BitmapFactory.decodeResource(getResources(),R.mipmap.view_img)));
     }
 
     private void setValue() {
