@@ -94,11 +94,11 @@ public class HorizontalGridViewFragment extends SupportFragment {
         ((ImageView)mView.findViewById(R.id.iv)).setImageBitmap(BitmapUtil.toRoundBitmap(
                 BitmapFactory.decodeResource(getResources(),R.mipmap.view_img)));
         ((ImageView)mView.findViewById(R.id.iv2)).setImageBitmap(BitmapUtil.centerSquareScaleBitmap(
-                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic),386));
+                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic),400));
         ((ImageView)mView.findViewById(R.id.iv3)).setImageBitmap(BitmapUtil.centerSquareScaleBitmap(
-                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic1),386));
+                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic1),400));
         ((ImageView)mView.findViewById(R.id.iv4)).setImageBitmap(BitmapUtil.centerSquareScaleBitmap(
-                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic2),386));
+                BitmapFactory.decodeResource(getResources(),R.mipmap.test_pic2),400));
 //        ((ImageView)mView.findViewById(R.id.iv2)).setImageBitmap(BitmapUtil.cropBitmap(
 //                BitmapFactory.decodeResource(getResources(),R.mipmap.view_img)));
     }
