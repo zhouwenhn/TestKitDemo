@@ -87,7 +87,7 @@ public class HorizontalGridViewFragment extends SupportFragment {
                 cityItem.cityCode = "12345";
                 adapter.notifyDataSetChanged();
 
-                Toast.makeText(getContext(), String.valueOf(position), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), String.valueOf(position)+cityItem.cityName, Toast.LENGTH_LONG).show();
 
             }
         });
@@ -104,6 +104,8 @@ public class HorizontalGridViewFragment extends SupportFragment {
     }
 
     private void setValue() {
+
+
         adapter = new NemoBaseAdapter<CityItem>(getActivity(), cityList, R.layout.grid_item_view) {
             @Override
             protected void buildItemView(ViewHolderHelper viewHolder, CityItem item, int position) {
@@ -113,6 +115,8 @@ public class HorizontalGridViewFragment extends SupportFragment {
         gridView.setAdapter(adapter);
 
 //        L.e(">getWidth>>>"+ gridView.getColumnWidth());
+
+
 
         int count = adapter.getCount();
         int columns;
