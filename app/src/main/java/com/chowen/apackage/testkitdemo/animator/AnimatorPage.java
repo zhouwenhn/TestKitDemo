@@ -16,10 +16,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.chowen.apackage.testkitdemo.R;
+import com.chowen.apackage.testkitdemo.rxbus.StudentEvent;
 import com.chowen.apackage.testkitdemo.utils.L;
 import com.chowen.apackage.testkitdemo.viewpage.base.adapter.ViewPageAdapter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
@@ -54,6 +56,45 @@ public class AnimatorPage extends SupportFragment {
             initViews();
             initAnimators();
         }
+
+        List<String> list1 = new ArrayList<>();
+//        StudentEvent s1 = new StudentEvent("1", "chowen");
+//        StudentEvent s12 = new StudentEvent("33", "chowen");
+//        String d = new String("chowen");
+//        list1.add(d);
+//        list1.add("chowen2");
+//
+//        List<String> list2 = new ArrayList<>();
+////        StudentEvent s2 = new StudentEvent("1", "chowen");
+////        StudentEvent s22 = new StudentEvent("333", "chowen");
+//        list2.add("chowen");
+//        list2.add("chowen3");
+//
+//
+//        L.e(">>>>>>"+ list1.contains(list2.get(0))+">>>"+list2.contains(list1.get(1)));
+//
+//        L.e(">>>>>22222>"+ list1.removeAll(list2));
+//        list1.addAll(list2);
+//        for (int i = 0; i < list1.size(); i++) {
+//            L.e(">>>>>33333>"+ list1.get(i));
+//        }
+
+
+        for (int i = 0; i < 1000; i++) {
+            list1.add("add"+i);
+        }
+
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 100; i++) {
+            L.e("for>"+ list1.get(i));
+        }
+        L.e("for cost_time>"+ (System.currentTimeMillis() - start));
+
+        long sta = System.currentTimeMillis();
+        for (String s:list1 ) {
+            L.e("foreach>>>>>33333>"+ s);
+        }
+        L.e("foreach cost_time>"+ (System.currentTimeMillis() - sta));
         return mView;
     }
 
@@ -155,6 +196,26 @@ public class AnimatorPage extends SupportFragment {
                 L.e("animation>>>" + animation.getAnimatedValue());
             }
         });
+    }
+
+    private List<StudentEvent> getUpdate(){
+        return new ArrayList<>();
+    }
+
+    private void sort(List<StudentEvent> updateDatas) {
+
+        List<StudentEvent> cache = getUpdate();
+
+        List<StudentEvent> pickCacheLists = new ArrayList<>();
+
+        for (int i = 0; i < cache.size(); i++) {
+            StudentEvent cacheitem = cache.get(i);
+            for (int j = 0; j < updateDatas.size(); j++) {
+                if (cacheitem.getId() == updateDatas.get(j).getId()){
+                    pickCacheLists.add(cacheitem);
+                }
+            }
+        }
     }
 
 }
