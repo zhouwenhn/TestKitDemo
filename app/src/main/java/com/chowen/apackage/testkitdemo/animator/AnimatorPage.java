@@ -404,10 +404,10 @@ L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
             @Override
             public void onClick(View view) {
 
-                ObjectAnimator objectA= ObjectAnimator.ofFloat(view1,
-                        "rotationY", view1.getRotationY(), view1.getRotationY()+90);
-                objectA.setDuration(2000);
-                objectA.start();
+//                ObjectAnimator objectA= ObjectAnimator.ofFloat(view1,
+//                        "rotationY", view1.getRotationY(), view1.getRotationY()+90);
+//                objectA.setDuration(2000);
+//                objectA.start();  // TODO: 2017/5/30 rotationY   --X 
 
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(view1.getRotationX(), view1.getRotationX()+360);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
