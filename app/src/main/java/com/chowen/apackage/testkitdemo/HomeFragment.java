@@ -56,6 +56,8 @@ public class HomeFragment extends SupportFragment {
     private ComponentName mDouble12;
     private PackageManager mPm;
 
+    private  volatile int num = 1;
+
     public static HomeFragment newInstance() {
 
         Bundle args = new Bundle();
@@ -215,7 +217,34 @@ public class HomeFragment extends SupportFragment {
 //                L.e("Current##"+TimeUtil.getCurrent(getContext()));
             }
         });
+
+
+        mView.findViewById(R.id.btn_volatile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                long s = System.currentTimeMillis();
+                for (int i = 0; i < 5; i++) {
+                    new Thread(new MyThread()).start();
+                }
+                L.e("MyThread>>Valitile= cost_time="+(System.currentTimeMillis() -  s));
+            }
+        });
     }
+
+    private class MyThread implements   Runnable{
+
+        @Override
+        public void run() {
+            L.e("MyThread>>Valitile="+ getVolatileNum());
+        }
+    }
+
+    private int getVolatileNum(){
+        // TODO: 2017/5/29  //valotile 不具备操作的原子性-依赖本身，在多线程有并发问题 --》synchronized
+
+        return num++;
+    }
+
 
     public void changeIcon11(View view) {
         disableComponent(mDefault);
