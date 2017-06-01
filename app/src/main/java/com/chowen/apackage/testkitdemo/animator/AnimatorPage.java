@@ -3,6 +3,7 @@ package com.chowen.apackage.testkitdemo.animator;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.animation.IntEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Rect;
@@ -20,6 +21,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -295,7 +297,76 @@ public class AnimatorPage extends SupportFragment {
                 scaleAnim(mView.findViewById(R.id.iv_r), 1000);
             }
         });
+
+        mView.findViewById(R.id.btn_start_scalex).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scaleAnimX(mView.findViewById(R.id.iv_r), 1000);
+            }
+        });
+
+        mView.findViewById(R.id.btn_start_o).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+
+//                animToObject(view);
+
+                ViewWrapper wrapper = new ViewWrapper(view);
+                ObjectAnimator objectAnimator = ObjectAnimator.ofInt(wrapper, "width", 220, 500);
+                objectAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        L.e("animation>>>getAnimatedValue="+animation.getAnimatedValue());
+                    }
+                });
+                objectAnimator.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        ((Button)view).setText("任意对象动画");
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+                objectAnimator.setDuration(3000).start();
+            }
+        });
     }
+
+    private void scaleAnimX(View viewById, int i) {
+        ObjectAnimator o = ObjectAnimator.ofFloat(viewById, "scaleX", 1.0f, 0.0f, 1.0f);
+        o.setDuration(3000).start();
+    }
+
+    private void animToObject(final View viewById) {
+        final IntEvaluator mEvaluator = new IntEvaluator();
+        ValueAnimator va = ValueAnimator.ofInt(220, 500);
+        va.setDuration(3000).start();
+        va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int value = (int) animation.getAnimatedValue();
+                float fraction = value / 380;//比例
+                L.e("evaluate=" + mEvaluator.evaluate(fraction, 220, 500));
+                viewById.getLayoutParams().width = value;//mEvaluator.evaluate(fraction, 220, 500);
+                viewById.requestLayout();
+
+            }
+        });
+    }
+
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void scaleAnim(View view, int delay) {
@@ -310,17 +381,17 @@ public class AnimatorPage extends SupportFragment {
 
         int point[] = new int[2];
         view.getLocationInWindow(point);
-L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
-        ObjectAnimator objectAnimator2 = ObjectAnimator.ofFloat(view, "translationY", point[1]-696-100);
+        L.e("getLocationInWindow>>x=" + point[0] + ">y=" + point[1]);
+        ObjectAnimator objectAnimator2 = ObjectAnimator.ofFloat(view, "translationY", point[1] - 696 - 100);
         objectAnimator2.setDuration(6000);
-        ObjectAnimator objectAnimator3 = ObjectAnimator.ofFloat(view, "translationX", point[0]-284);
+        ObjectAnimator objectAnimator3 = ObjectAnimator.ofFloat(view, "translationX", point[0] - 284);
         objectAnimator3.setDuration(6000);
 
         AnimatorSet animatorSet = new AnimatorSet();
 //        animatorSet.play(objectAnimator).with(objectAnimator1).after(objectAnimator2).with(objectAnimator3);
 //        animatorSet.playTogether(objectAnimator, objectAnimator1);
 //        animatorSet.play(objectAnimator).before(objectAnimator1);
-        animatorSet.playSequentially(objectAnimator, objectAnimator1,objectAnimator2,objectAnimator3);
+        animatorSet.playSequentially(objectAnimator, objectAnimator1, objectAnimator2, objectAnimator3);
         animatorSet.setStartDelay(delay);
         animatorSet.start();
 
@@ -391,7 +462,7 @@ L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
                         float value = (float) animation.getAnimatedValue();
-                        L.e("onAnimationUpdate>>onAnimationUpdate="+value);
+                        L.e("onAnimationUpdate>>onAnimationUpdate=" + value);
                         mView.findViewById(R.id.iv_r).setScaleX(value);
                         mView.findViewById(R.id.iv_r).setScaleY(value);
                         mView.findViewById(R.id.iv_r).setAlpha(value);
@@ -399,7 +470,7 @@ L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
                 });
             }
         });
-        final View    view1   = mView.findViewById(R.id.iv_rotation);
+        final View view1 = mView.findViewById(R.id.iv_rotation);
         mView.findViewById(R.id.btn_start_rr).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -409,7 +480,7 @@ L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
 //                objectA.setDuration(2000);
 //                objectA.start();  // TODO: 2017/5/30 rotationY   --X 
 
-                ValueAnimator valueAnimator = ValueAnimator.ofFloat(view1.getRotationX(), view1.getRotationX()+360);
+                ValueAnimator valueAnimator = ValueAnimator.ofFloat(view1.getRotationX(), view1.getRotationX() + 360);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
@@ -425,6 +496,7 @@ L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
         });
     }
 
+    // TODO: 2017/6/1 浮动  水波 
     private void floatAnim(View view, int delay) {
         List<Animator> animators = new ArrayList<>();
         ObjectAnimator translationXAnim = ObjectAnimator.ofFloat(view, "translationX", -8.0f, 8.0f, -8.0f);
@@ -476,6 +548,24 @@ L.e("getLocationInWindow>>x="+point[0]+">y="+point[1]);
                     pickCacheLists.add(cacheitem);
                 }
             }
+        }
+    }
+
+    private class ViewWrapper {
+        private View mView;
+
+        public ViewWrapper(View view) {
+            mView = view;
+        }
+
+        private void setWidth(int width) {
+            mView.getLayoutParams().width = width;
+//            mView.invalidate();
+            mView.requestLayout();
+        }
+
+        private int getWidth() {
+            return mView.getLayoutParams().width;
         }
     }
 
