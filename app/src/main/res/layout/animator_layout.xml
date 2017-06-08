@@ -159,5 +159,12 @@
             android:layout_height="wrap_content"
             android:text="scalex动画" />
 
+        <Button
+            android:id="@+id/btn_start_rotate"
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="旋转动画" />
+
     </LinearLayout>
 </ScrollView>

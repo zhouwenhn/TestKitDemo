@@ -229,6 +229,12 @@ public class HomeFragment extends SupportFragment {
                 L.e("MyThread>>Valitile= cost_time="+(System.currentTimeMillis() -  s));
             }
         });
+        mView.findViewById(R.id.btn_clipdrawable).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                start(ClipDrawableViewPage.newInstance());
+            }
+        });
     }
 
     private class MyThread implements   Runnable{

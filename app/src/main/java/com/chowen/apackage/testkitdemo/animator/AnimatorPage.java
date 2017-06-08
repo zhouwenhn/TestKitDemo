@@ -37,6 +37,8 @@ import java.util.List;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
+import static com.chowen.apackage.testkitdemo.R.id.tv;
+
 /**
  * @author zhouwen
  * @since 2017/2/26
@@ -114,7 +116,7 @@ public class AnimatorPage extends SupportFragment {
     }
 
     private void initViews() {
-        mTv = (TextView) mView.findViewById(R.id.tv);
+        mTv = (TextView) mView.findViewById(tv);
         mView.findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,6 +131,8 @@ public class AnimatorPage extends SupportFragment {
                 L.e("chowen#getLocalVisibleRect>>" + rect);
                 v.getGlobalVisibleRect(rect);
                 L.e("chowen#getGlobalVisibleRect>>" + rect);
+
+                doAnimation();
 
             }
         });
@@ -343,6 +347,22 @@ public class AnimatorPage extends SupportFragment {
                 objectAnimator.setDuration(3000).start();
             }
         });
+
+        mView.findViewById(R.id.btn_start_rotate).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rorateAnim(mView.findViewById(R.id.iv_r), 1000);
+            }
+        });
+    }
+
+    private void rorateAnim(View viewById, int i) {
+        ObjectAnimator o = ObjectAnimator.ofFloat(viewById, "rotation", 0f, 360f);
+        o.setStartDelay(i);
+        o.setDuration(6000);
+        o.setRepeatMode(Animation.INFINITE);
+        o.setRepeatCount(Animation.INFINITE);
+        o.start();
     }
 
     private void scaleAnimX(View viewById, int i) {
@@ -529,6 +549,24 @@ public class AnimatorPage extends SupportFragment {
                 L.e("animation>>>" + animation.getAnimatedValue());
             }
         });
+    }
+
+    private void doAnimation(){
+        final Button button = (Button) mView.findViewById(R.id.btn_start);
+        ValueAnimator animator = ValueAnimator.ofInt(0,400);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+
+                int curValue = (int)animation.getAnimatedValue();
+                L.e("doAnimation==curValue="+curValue);
+                button.layout(button.getLeft(),curValue,button.getRight(),curValue+button.getHeight());
+            }
+        });
+        animator.setRepeatMode(ValueAnimator.REVERSE);
+        animator.setRepeatCount(ValueAnimator.INFINITE);
+        animator.setDuration(1000);
+        animator.start();
     }
 
     private List<StudentEvent> getUpdate() {
