@@ -1,0 +1,40 @@
+经纶调用小鱼接口
+经纶app需要小鱼端的人脸识别，语音识别，tts，机器人聊天，人脸识别等服务，小鱼端提供一个aar包，aar包含调用的接口如下：
+
+一、语音识别(广播方式：经纶被动接受)
+*广播(需要经纶提供广播)
+*传入值：无
+*返回值：语音识别文本，经纶app在后台运行，小鱼会将识别结果传给经纶。按Bundle返回，字段：voice_recognition_str（String）
+
+二、TTS(bind service方式：NemoRemoteService) ，返回一个代理对象由于调用小鱼端tts接口。
+*权限：permission android:name=”nemo.permission.REMOTE_SERVICE”
+*action: nemo.intent.action.NEMO_REMOTE_SERVICE
+调用方法：textToSpeech(String ttsContent, boolean isInterruptTts);
+参数说明：
+*ttsContent—-播报文本
+*isInterruptTts—-是否打断，默认false
+回调方法：onSpeakStatusListener(boolean speakStatus)，返回以aidl回调方式返回，经纶端绑定服务时需要注册.
+参数说明：
+*speakStatus—-播报tts状态
+
+三、机器人语音聊天(bind service方式：NemoRemoteService)
+*权限：permission android:name=”nemo.permission.REMOTE_SERVICE”
+*action: nemo.intent.action.NEMO_REMOTE_SERVICE
+bind service方法：enableSpeech(boolean isEnable)
+参数说明：isEnable—-是否开启唤醒
+
+四、人脸识别:（Activity方式:NemoFaceDetectActivity ）
+*权限：permission android:name=”nemo.permission.FACE_DETECT”
+*action: nemo.intent.action.NEMO_FACE_DETECT
+*传入值：经纶在小鱼端sdcard人脸目录路径，按Bundle传入，字段常量:face_path(String)
+*返回值：返回人脸名称，按Bundle返回,字段：face_detect_result (String)
+
+调用：
+Intent intent = new Intent();
+intent.setClassName(“packageName","activityName");
+startActivity(intent);
+
+五、视频通话—方案暂定
+*广播action: nemo.intent.action.NEMO_VIDEO_CALL
+*传入值：暂定
+*返回值：暂定
