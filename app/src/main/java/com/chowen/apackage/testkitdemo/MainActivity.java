@@ -15,6 +15,7 @@ import android.view.WindowManager;
 
 import com.chowen.apackage.testkitdemo.treadtest.MThread;
 import com.chowen.apackage.testkitdemo.treadtest.MyThread2;
+import com.chowen.apackage.testkitdemo.utils.L;
 
 import java.util.List;
 
@@ -34,9 +35,28 @@ public class MainActivity extends SupportActivity {
         //test service
         Intent intent = new Intent(MainActivity.this, TestService.class);
         startService(intent);
+
+
+        checkActivity();
     }
 
-//test thread
+    private void checkActivity() {
+        Intent intent = new Intent();
+        intent.setClassName("activity.main.permissiontest", "activity.main.permissiontest.MainActivity");
+        L.e("checkActivity>>>>"+(getPackageManager().resolveActivity(intent, 0) == null));
+        if (getPackageManager().resolveActivity(intent, 0) == null) {
+            L.e("checkActivity>>>>不存在");
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        L.e("onActivityResult>>>>222222"+
+                data.getBundleExtra("bund").getString("key")+">>>requestCode="+requestCode+">>resultCode="+resultCode);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    //test thread
     private void testCaseThread() {
         MThread myThead = new MThread();
         Thread thread = new Thread(myThead);

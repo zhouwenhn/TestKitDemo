@@ -3,12 +3,12 @@
     package="com.chowen.apackage.testkitdemo">
 
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
-     声明一个权限
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    声明一个权限
     <permission
         android:name="android.permission.test_kit"
         android:label="Start My Permission"
-        android:protectionLevel="normal" >
-    </permission>
+        android:protectionLevel="normal"></permission>
 
     <application
         android:name=".TestApplication"
@@ -19,7 +19,8 @@
         android:theme="@style/AppTheme"
         android:windowBackground="@null">
 
-        <activity android:name="com.chowen.apackage.testkitdemo.MainActivity"
+        <activity
+            android:name="com.chowen.apackage.testkitdemo.MainActivity"
             android:exported="true"
             android:permission="android.permission.test_kit">
             <intent-filter>
@@ -28,11 +29,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.MAIN_TESTKIT" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -67,10 +70,11 @@
             </intent-filter>
         </activity-alias>
 
-        <receiver android:name="com.chowen.apackage.testkitdemo.TestReceiver"
+        <receiver
+            android:name="com.chowen.apackage.testkitdemo.TestReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="action.intent.recevier"/>
+                <action android:name="action.intent.recevier" />
             </intent-filter>
         </receiver>
     </application>
