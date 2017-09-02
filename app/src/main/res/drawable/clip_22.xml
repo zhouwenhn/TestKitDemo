@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipOrientation="vertical"
+    android:drawable="@drawable/clip_ring_drawable22"
+    android:gravity="bottom">
+
+</clip>
+

@@ -354,6 +354,24 @@ public class AnimatorPage extends SupportFragment {
                 rorateAnim(mView.findViewById(R.id.iv_r), 1000);
             }
         });
+
+        mView.findViewById(R.id.btn_scale).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView imageView = (ImageView) mView.findViewById(R.id.iv_scale);
+                ObjectAnimator objectAnimator =  ObjectAnimator.ofFloat(imageView, "scaleX", 1.0f, 1.3f);
+                ObjectAnimator objectAnimator1 = ObjectAnimator.ofFloat(imageView, "scaleY", 1.0f, 1.3f);
+                AnimatorSet animatorSet  = new AnimatorSet();
+                animatorSet.playTogether(objectAnimator, objectAnimator1);
+                animatorSet.setDuration(2000);
+                objectAnimator.setRepeatCount(ObjectAnimator.INFINITE);
+                objectAnimator.setRepeatMode(ObjectAnimator.INFINITE);
+
+                objectAnimator1.setRepeatCount(ObjectAnimator.INFINITE);
+                objectAnimator1.setRepeatMode(ObjectAnimator.INFINITE);
+                animatorSet.start();
+            }
+        });
     }
 
     private void rorateAnim(View viewById, int i) {

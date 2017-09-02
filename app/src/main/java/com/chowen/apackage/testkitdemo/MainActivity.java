@@ -95,11 +95,12 @@ public class MainActivity extends SupportActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        L.e("onActivityResult>>>>222222" +
-                data.getBundleExtra("bund").getString("key") + ">>>requestCode=" + requestCode + ">>resultCode=" + resultCode);
+        L.e("onActivityResult>>>>222222" +  "data==null="+(data==null)+
+//                data.getBundleExtra("bund").getString("key") +
+                ">>>requestCode=" + requestCode + ">>resultCode=" + resultCode);
         super.onActivityResult(requestCode, resultCode, data);
     }
-
+    //经纶调起人脸setResult方法与onActivityResult方法不是同步的,不同launchmode返回时机不一样
     //test thread
     private void testCaseThread() {
         MThread myThead = new MThread();

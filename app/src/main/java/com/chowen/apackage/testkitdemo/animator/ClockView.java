@@ -18,7 +18,7 @@
 //import java.util.Date;
 //
 ///**
-// * Created by zhouwen on 17/3/22.
+// * Created by zhouwen on 17/3/clip_22.
 // */
 //public class ClockView extends View {
 //    //View默认宽度

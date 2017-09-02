@@ -70,6 +70,9 @@
             </intent-filter>
         </activity-alias>
 
+        <activity android:name="com.chowen.apackage.testkitdemo.TestmutilProcessActivity"
+            android:process=":remote"/>
+
         <receiver
             android:name="com.chowen.apackage.testkitdemo.TestReceiver"
             android:exported="true">
