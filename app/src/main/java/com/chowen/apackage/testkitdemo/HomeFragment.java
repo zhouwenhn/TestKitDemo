@@ -45,9 +45,10 @@ import com.chowen.apackage.testkitdemo.viewpage.ViewPagerFragment;
 import java.io.File;
 import java.util.List;
 
+import activity.main.tastlibrary.task.TaskExecutor;
 import me.yokeyword.fragmentation.SupportFragment;
 import rx.functions.Action1;
-import server.IMyAidlInterface;
+//import server.IMyAidlInterface;
 
 import static android.content.Context.ACTIVITY_SERVICE;
 
@@ -75,17 +76,17 @@ public class HomeFragment extends SupportFragment {
         return fragment;
     }
 
-    private IMyAidlInterface iMyAidlInterface;
+//    private IMyAidlInterface iMyAidlInterface;
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            iMyAidlInterface = IMyAidlInterface.Stub.asInterface(service);
+//            iMyAidlInterface = IMyAidlInterface.Stub.asInterface(service);
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            iMyAidlInterface=null;
+//            iMyAidlInterface=null;
         }
     };
 
@@ -121,6 +122,35 @@ public class HomeFragment extends SupportFragment {
                         L.e("id:" + studentEvent.getId() + "  name:" + studentEvent.getName());
                     }
                 });
+
+        // TODO: 2017/9/2 测试线程池线程耗时
+        TaskExecutor.executeMonitorTask("chowen", new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                L.e("TaskExecutor>>", " TaskExecutor>>>>>>>");
+
+            }
+        });
+
+        TaskExecutor.executeMonitorTask("chowen222", new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                L.e("TaskExecutor>>", " TaskExecutor>>>>>>>2222");
+
+            }
+        });
+
         return mView;
     }
 
@@ -144,16 +174,16 @@ public class HomeFragment extends SupportFragment {
 
         Intent intent = new Intent();
         intent.setAction("intent.action.service");
-        getActivity().bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+//        getActivity().bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
 
         mView.findViewById(R.id.btn_bind_service).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    iMyAidlInterface.sendHandlerMsg("chowen>>>2222277777=");
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    iMyAidlInterface.sendHandlerMsg("chowen>>>2222277777=");
+//                } catch (RemoteException e) {
+//                    e.printStackTrace();
+//                }
             }
         });
 

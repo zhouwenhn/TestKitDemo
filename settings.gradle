@@ -1,1 +1,1 @@
-include ':app', ':patternlibrary', ':gradletest'
+include ':app', ':patternlibrary', ':gradletest', ':tasklibrary'

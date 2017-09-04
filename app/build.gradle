@@ -16,6 +16,10 @@ android {
         abortOnError false
     }
 
+    freeline {
+        hack true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -58,4 +62,6 @@ dependencies {
 
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxjava:1.1.0'
+    compile project(':tasklibrary')
+
 }

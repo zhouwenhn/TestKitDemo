@@ -2,6 +2,7 @@ package com.chowen.apackage.testkitdemo;
 
 import android.app.Application;
 
+import com.antfortune.freeline.FreelineCore;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -19,5 +20,6 @@ public class TestApplication extends Application {
             return;
         }
         LeakCanary.install(this);
+        FreelineCore.init(this);
     }
 }
